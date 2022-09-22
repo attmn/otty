@@ -17,10 +17,7 @@ const AboutSection = () => {
           </h2>
         </div>
         <div className={styles.blobContainer}>
-          <div
-            className={styles.blob1}
-            style={{ backgroundImage: `url(${blob1})` }}
-          >
+          <div className={styles.blob1}>
             <div className={styles.blobCircle} />
             <h3>
               Safe for everything<span>(almost)</span>
@@ -33,10 +30,7 @@ const AboutSection = () => {
           </div>
         </div>
         <div className={styles.blobContainer}>
-          <div
-            className={styles.blob2}
-            style={{ backgroundImage: `url(${blob2})` }}
-          >
+          <div className={styles.blob2}>
             <div className={styles.blobCircle} />
             <h3>All-purpose cleaner</h3>
             <p>
@@ -49,10 +43,7 @@ const AboutSection = () => {
           </div>
         </div>
         <div className={styles.blobContainer}>
-          <div
-            className={styles.blob3}
-            style={{ backgroundImage: `url(${blob3})` }}
-          >
+          <div className={styles.blob3}>
             <div className={styles.blobCircle} />
             <h3>Eco-friendly</h3>
             <p>
