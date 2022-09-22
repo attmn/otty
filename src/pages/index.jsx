@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import Layout from "../components/Layout";
 import BlogRoll from "../components/BlogRoll"
 import Hero from "../components/Hero";
+import AboutSection from "../components/AboutSection";
 
 const IndexPage = () => (
   <Layout>
@@ -15,6 +16,7 @@ const IndexPage = () => (
             style={{ marginBottom: "6rem" }}
           >
             <Hero />
+            <AboutSection />
             <BlogRoll/>
           </div>
         </div>

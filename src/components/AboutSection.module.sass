@@ -1,0 +1,89 @@
+@use '../styles/tokens'
+
+.container
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    column-gap: 1.2rem
+    padding: 6.4rem 2.4rem 0 2.4rem
+    background-color: tokens.$background-light
+    justify-items: center
+
+.heroContainer
+    grid-column: 1/5
+
+.headingContainer
+    h2
+        color: tokens.$neutral-heading-dark
+        margin-bottom: 3.2rem
+        text-align: center
+
+.blobContainer
+    display: grid
+
+.blob1, .blob2, .blob3
+    position: relative
+    background: no-repeat center center
+    text-align: center
+
+    p
+        margin: 0
+        color: tokens.$neutral-text-dark
+
+.blobCircle
+    width: 4.8rem
+    height: 4.8rem
+    border-radius: 100%
+    position: absolute
+
+.blob1
+    padding: 8rem 6rem
+    max-width: 38rem
+
+    span
+        font-size: 1.8rem
+        display: block
+        font-style: italic
+        color: tokens.$secondary500
+
+    .blobCircle
+        background-color: tokens.$secondary500
+        right: 8rem
+        top: 0.9rem
+
+.blob2
+    padding: 11rem 7rem
+    max-width: 52rem
+    justify-self: right
+
+    .blobCircle
+        background-color: tokens.$tertiary500
+        left: 12rem
+        top: 2.5rem
+
+.blob3
+    padding: 9rem 8rem
+    max-width: 37rem
+
+    .blobCircle
+        background-color: tokens.$primary500
+        right: 10rem
+        top: 1.5rem
+
+@media screen and (min-width: 1024px)
+    .container
+        grid-template-columns: repeat(12, 1fr)
+        column-gap: 2.4rem
+        padding: 9.6rem 4.8rem 0 4.8rem
+
+    .heroContainer
+        grid-column: 3/11
+        grid-row: 1
+
+    .headingContainer
+
+    .blob1
+        padding: 6.2rem 6rem
+        max-width: 38rem
+
+        span
+            font-size: 2.4rem
