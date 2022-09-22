@@ -2,6 +2,7 @@ import * as React from "react";
 import { Helmet } from "react-helmet";
 import Layout from "../components/Layout";
 import BlogRoll from "../components/BlogRoll"
+import Hero from "../components/Hero";
 
 const IndexPage = () => (
   <Layout>
@@ -13,8 +14,8 @@ const IndexPage = () => (
             className="column is-10 is-offset-1"
             style={{ marginBottom: "6rem" }}
           >
-            <h1 className="title is-size-2 is-bold-light">Otty</h1>
-            <BlogRoll />
+            <Hero />
+            <BlogRoll/>
           </div>
         </div>
       </div>

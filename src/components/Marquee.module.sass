@@ -1,0 +1,41 @@
+@use '../styles/tokens'
+
+.marqueeContainer
+    display: grid
+    grid-column: 1/5
+    grid-template-columns: 1fr 1fr
+    row-gap: 9.6rem
+    column-gap: 4.8rem
+    margin-top: 9.6rem
+
+.marqueeItem
+    display: flex
+    flex-direction: column
+    align-items: center
+    row-gap: 1.6rem
+
+    img
+        width: 6.4rem
+        height: 6.4rem
+
+    span
+        display: block
+        color: tokens.$white
+        text-align: center
+        font-size: 1.6rem
+
+@media screen and (min-width: 1024px)
+    .marqueeContainer
+        grid-column: 1/12
+        grid-row: 2
+        width: 100vw !important
+        margin-top: 12.8rem
+        margin-left: 9.6rem
+
+    .marqueeItem
+        display: flex
+        flex-direction: column
+        align-items: center
+        row-gap: 1.6rem
+        max-width: 12.8rem
+        margin: 0 6.4rem

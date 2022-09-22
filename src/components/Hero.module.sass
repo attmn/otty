@@ -1,0 +1,44 @@
+@use '../styles/tokens'
+
+.container
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    column-gap: 1.2rem
+    padding: 0 2.4rem
+    background-color: tokens.$primary500
+    justify-items: center
+
+.heroContainer
+    grid-column: 1/5
+
+.headingContainer
+    h1, span
+        color: tokens.$white
+        margin-bottom: 3.2rem
+
+    span
+        display: block
+        font-size: 1.6rem
+
+@media screen and (min-width: 1024px)
+    .container
+        grid-template-columns: repeat(12, 1fr)
+        column-gap: 2.4rem
+        padding: 0 4.8rem
+
+    .heroContainer
+        grid-column: 3/11
+        grid-row: 1
+
+    .marqueeContainer
+        grid-column: 1/12
+        grid-row: 2
+        width: 100vw
+
+    .headingContainer
+
+        h1
+            margin-top: 12.8rem
+
+        span
+            font-size: 2rem
