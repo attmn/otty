@@ -23,22 +23,35 @@ const AboutSection = () => {
               Safe for everything<span>(almost)</span>
             </h3>
             <p>
-              В процессе действия распадается на воду, активный кислород и соду.
-              Никакого хлора и других вредных химикатов. Otty подходит для
-              детских вещей и полностью безопасен для аллергиков.
+              In the process it decomposes into water, active oxygen and soda.
+              No chlorine or other harmful chemicals. Otty is suitable for
+              children's clothing and completely safe for people with allergies
             </p>
+          </div>
+          <div className={styles.smBlobContainer}>
+            <div className={styles.blobSm2}>
+              Cleans tableware from grease, soot & food
+            </div>
+            <div className={styles.blobSm1}>
+              Gets rid of <br /> smells
+            </div>
           </div>
         </div>
         <div className={styles.blobContainer}>
+          <div className={styles.smBlobContainer}>
+            <div className={styles.blobSm3}>Gets rid of yellowing</div>
+            <div className={styles.blobSm4}>Removes oil stains</div>
+            <div className={styles.blobSm5}>Removes food & drink stains</div>
+          </div>
           <div className={styles.blob2}>
             <div className={styles.blobCircle} />
             <h3>All-purpose cleaner</h3>
             <p>
-              Эффективно удаляет любые пятна и загрязнения с белых, цветных и
-              черных тканей. Не выбивает цвет и не портит ткань. Эффективно
-              удаляет загрязнения с кафеля, стекла, камня, пластика, резины,
-              эмалированных поверхностей, фаянса, стеклокерамики, обивки мягкой
-              мебели и ковров. Удаляет бактерии и вирусы.
+              Effectively removes any stains and dirt from white, coloured and
+              black fabrics. Does not remove colour and doesn't ruin the fabric.
+              Effectively removes dirt from tiles, glass, stone, plastic,
+              rubber, enameled surfaces, earthenware, glass-ceramics, upholstery
+              and carpets. Kills bacteria and viruses.
             </p>
           </div>
         </div>
@@ -47,11 +60,15 @@ const AboutSection = () => {
             <div className={styles.blobCircle} />
             <h3>Eco-friendly</h3>
             <p>
-              В основе действия Otty лежит выделение активного кислорода. После
-              использования его можно вылить в раковину, не боясь загрязнения
-              воды вредными химикатами. Упаковка сделана из переработанного
-              пластика и после используется заново.
+              Otty works by releasing active oxygen. After use, it can be poured
+              down the sink drain without fear of polluting the water with
+              harmful chemicals. Our packaging is made from recycled plastic and
+              is widely recycled.
             </p>
+          </div>
+          <div className={styles.smBlobContainer}>
+            <div className={styles.blobSm6}>Cleans furniture & carpets</div>
+            <div className={styles.blobSm7}>Cleans surfaces</div>
           </div>
         </div>
       </div>
