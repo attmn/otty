@@ -40,8 +40,8 @@ const AboutSection = () => {
         <div className={styles.blobContainer}>
           <div className={styles.smBlobContainer}>
             <div className={styles.blobSm3}>Gets rid of yellowing</div>
-            <div className={styles.blobSm4}>Removes oil stains</div>
             <div className={styles.blobSm5}>Removes food & drink stains</div>
+            <div className={styles.blobSm4}>Removes oil stains</div>
           </div>
           <div className={styles.blob2}>
             <div className={styles.blobCircle} />
