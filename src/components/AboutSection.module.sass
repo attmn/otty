@@ -70,6 +70,7 @@
     flex-direction: column
     width: 100%
     height: 100%
+    gap: 3.2rem
 
 .blobSm1
     padding: 4rem 2rem
@@ -122,6 +123,7 @@
     width: 18rem
     height: 9rem
     color: tokens.$white
+    align-self: flex-end
 
     background-image: url('../img/blobSm5.svg')
 
@@ -147,6 +149,7 @@
     width: 15rem
     height: 6rem
     color: tokens.$primary800
+    align-self: flex-end
 
     background-image: url('../img/blobSm7.svg')
 
@@ -223,29 +226,33 @@
 
     .blobContainer:nth-child(3)
         margin-top: 6.4rem
-        height: 50rem
         gap: 0
 
     .blobContainer:nth-child(4)
         margin-top: 9.6rem
-        height: 52rem
         gap: 5%
 
     .smBlobContainer
         margin-bottom: 0
+        gap: 6.4rem
 
 @media screen and (min-width: 1330px)
     .smBlobContainer
         flex-direction: row
         align-self: center
         justify-content: space-between
+        gap: 0
 
     .blobContainer:nth-child(2)
         .smBlobContainer
             height: 30rem
 
     .blobContainer:nth-child(3)
+        height: 50rem
         gap: 5%
+
+    .blobContainer:nth-child(4)
+        height: 52rem
 
     .blobSm1
         align-self: start
