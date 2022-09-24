@@ -4,6 +4,7 @@ import Layout from "../components/Layout";
 import BlogRoll from "../components/BlogRoll"
 import Hero from "../components/Hero";
 import AboutSection from "../components/AboutSection";
+import HowToUseSection from "../components/HowToUseSection";
 
 const IndexPage = () => (
   <Layout>
@@ -17,6 +18,7 @@ const IndexPage = () => (
           >
             <Hero />
             <AboutSection />
+            <HowToUseSection />
             <BlogRoll/>
           </div>
         </div>

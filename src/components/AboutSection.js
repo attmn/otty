@@ -1,15 +1,11 @@
-import React, { Fragment } from "react";
+import React from "react";
 
 import * as styles from "./AboutSection.module.sass";
-
-import blob1 from "../img/blob1.svg";
-import blob2 from "../img/blob2.svg";
-import blob3 from "../img/blob3.svg";
 
 const AboutSection = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.heroContainer}>
+      <div className={styles.sectionContainer}>
         <div className={styles.headingContainer}>
           <h2>
             Whitens, removes stains from coloured, white and black fabrics.
