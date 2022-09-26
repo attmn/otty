@@ -4,7 +4,7 @@
     display: grid
     grid-template-columns: repeat(4, 1fr)
     column-gap: 1.2rem
-    padding: 6.4rem 2.4rem 0 2.4rem
+    padding: 6.4rem 2.4rem 6.4rem 2.4rem
     background-color: tokens.$background-light
 
 .title
@@ -19,11 +19,14 @@
     p
         color: tokens.$neutral-text-dark
 
-.blogRoll
+.blogContainer
     grid-column: 1/5
+
+.blogRoll
     display: flex
     flex-direction: column
-    row-gap: 6.4rem
+    row-gap: 3.2rem
+    margin-bottom: 4.8rem
 
 .blogItemContainer
     padding: 2.4rem
@@ -61,12 +64,17 @@
     width: 100%
     margin-bottom: 0.8rem
 
+.btnContainer
+    display: flex
+    justify-content: center
+
 @media screen and (min-width: 768px)
     .blogRoll
         display: grid
         grid-template-columns: 1fr 1fr
         column-gap: 3.2rem
-        row-gap: 6.4rem
+        row-gap: 3.2rem
+        margin-bottom: 6.4rem
 
     .blogItemContainer
         max-width: 33.4rem
@@ -78,7 +86,7 @@
     .container
         grid-template-columns: repeat(12, 1fr)
         column-gap: 2.4rem
-        padding: 6.4rem 4.8rem 0 4.8rem
+        padding: 6.4rem 4.8rem 9.6rem 4.8rem
 
     .title
         grid-column: 3/11
@@ -87,7 +95,7 @@
         h2
             margin-bottom: 0
 
-    .blogRoll
+    .blogContainer
         grid-column: 3/11
 
     .blogItemContainer

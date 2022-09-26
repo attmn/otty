@@ -2,7 +2,7 @@ import React from "react";
 import * as styles from "./Button.module.sass";
 import classNames from "classnames";
 
-const Button = ({ children, ofType = "primary", ...props }) => {
+const Button = ({ children, ofType = "primary", ofSize, ...props }) => {
   const { button, primary, primaryOutline, secondary, tertiary, large } =
     styles;
   const { className, ...otherProps } = props;
@@ -14,7 +14,7 @@ const Button = ({ children, ofType = "primary", ...props }) => {
         [`${primaryOutline}`]: ofType === "primaryOutline",
         [`${secondary}`]: ofType === "secondary",
         [`${tertiary}`]: ofType === "tertiary",
-        [`${large}`]: ofType === "large",
+        [`${large}`]: ofSize === "large",
       })}
       {...otherProps}
     >

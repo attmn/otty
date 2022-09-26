@@ -16,15 +16,24 @@ const BlogRollTemplate = (props) => {
         <p>Find out where and how to use Otty in the most effective way</p>
       </div>
       {props.blogPage ? (
-        <div className={styles.blogRoll}>
-          {posts && posts.map(({ node: post }) => <BlogItem post={post} />)}
+        <div className={styles.blogContainer}>
+          <div className={styles.blogRoll}>
+            {posts && posts.map(({ node: post }) => <BlogItem post={post} />)}
+          </div>
         </div>
       ) : (
-        <div className={styles.blogRoll}>
-          {posts &&
-            posts
-              .filter(({ node: post }) => post.frontmatter.featuredpost)
-              .map(({ node: post }) => <BlogItem post={post} />)}
+        <div className={styles.blogContainer}>
+          <div className={styles.blogRoll}>
+            {posts &&
+              posts
+                .filter(({ node: post }) => post.frontmatter.featuredpost)
+                .map(({ node: post }) => <BlogItem post={post} />)}
+          </div>
+          <div className={styles.btnContainer}>
+            <Button ofType="primary" ofSize="large">
+              View all blog posts
+            </Button>
+          </div>
         </div>
       )}
     </div>

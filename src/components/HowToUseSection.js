@@ -10,9 +10,7 @@ const HowToUseSection = () => {
   return (
     <div className={styles.container}>
       <div className={styles.sectionContainer}>
-        <div className={styles.headingContainer}>
-          <h2>Where and how to use Otty</h2>
-        </div>
+        <h2>Where and how to use Otty</h2>
         <div className={styles.blobContainer}>
           <div className={styles.blob1}>
             <img src={icon1} alt="" aria-hidden />

@@ -5,6 +5,7 @@ import BlogRoll from "../components/BlogRoll"
 import Hero from "../components/Hero";
 import AboutSection from "../components/AboutSection";
 import HowToUseSection from "../components/HowToUseSection";
+import VideoSection from "../components/VideoSection";
 
 const IndexPage = () => (
   <Layout>
@@ -19,6 +20,7 @@ const IndexPage = () => (
             <Hero />
             <AboutSection />
             <HowToUseSection />
+            <VideoSection />
             <BlogRoll/>
           </div>
         </div>

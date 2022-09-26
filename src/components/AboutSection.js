@@ -6,12 +6,10 @@ const AboutSection = () => {
   return (
     <div className={styles.container}>
       <div className={styles.sectionContainer}>
-        <div className={styles.headingContainer}>
-          <h2>
-            Whitens, removes stains from coloured, white and black fabrics.
-            Cleans any surface, item or piece of clothing
-          </h2>
-        </div>
+        <h2>
+          Whitens, removes stains from coloured, white and black fabrics. Cleans
+          any surface, item or piece of clothing
+        </h2>
         <div className={styles.blobContainer}>
           <div className={styles.blob1}>
             <div className={styles.blobCircle} />

@@ -23,13 +23,12 @@ const Navbar = () => {
           </Link>
           <Media
             queries={{
-              small: "(max-width: 600px)",
               large: "(min-width: 1200px)",
             }}
           >
             {(matches) => (
               <Fragment>
-                {matches.small && (
+                {!matches.large && (
                   <button
                     className={`${styles.burgerMenu} ${
                       modalIsOpen && styles.burgerMenuActive

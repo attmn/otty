@@ -1,0 +1,98 @@
+@use '../styles/tokens'
+
+.container
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    column-gap: 1.2rem
+    padding: 6.4rem 2.4rem 0 2.4rem
+    background-color: tokens.$white
+    justify-items: center
+
+.sectionContainer
+    grid-column: 1/5
+    width: 100%
+
+    h2
+        color: tokens.$black
+        margin-bottom: 3.2rem
+        text-align: center
+
+.videoContainer
+    display: grid
+    grid-template-columns: 1fr 1fr
+    column-gap: 1.2rem
+    margin-bottom: 4.8rem
+
+.videoGroup:last-child
+    margin-top: 2.4rem
+
+.video
+    aspect-ratio: 9 / 16
+    width: 100%
+    background-color: black
+    border-radius: 0.6rem
+
+    &:first-child
+        margin-bottom: 1.2rem
+
+.btnContainer
+    display: flex
+    flex-direction: column
+    gap: 1.2rem
+    margin-bottom: 4.8rem
+
+@media screen and (min-width: 768px)
+    .videoContainer
+        column-gap: 3.2rem
+        margin-bottom: 6.4rem
+
+    .videoGroup
+        display: flex
+        gap: 3.2rem
+
+    .videoGroup:last-child
+        margin: unset
+
+    .video
+        &:first-child
+            margin-bottom: 2.4rem
+        &:last-child
+            margin-top: 2.4rem
+
+    .btnContainer
+        flex-direction: row
+        gap: 2.4rem
+        margin-bottom: 6.4rem
+        justify-content: center
+
+@media screen and (min-width: 1024px)
+    .container
+        grid-template-columns: repeat(12, 1fr)
+        column-gap: 2.4rem
+        padding: 9.6rem 4.8rem 0 4.8rem
+
+    .sectionContainer
+        grid-column: 3/11
+        grid-row: 1
+
+    .video
+        &:first-child
+            margin-bottom: 6.4rem
+        &:last-child
+            margin-top: 6.4rem
+
+@media screen and (min-width: 1330px)
+    .sectionContainer
+        h2
+            margin-bottom: 6.4rem
+
+    .btnContainer
+        margin-bottom: 12.8rem
+
+@media screen and (min-width: 1920px)
+    .videoContainer
+        column-gap: 6.4rem
+        margin-bottom: 9.6rem
+
+    .videoGroup
+        gap: 6.4rem
