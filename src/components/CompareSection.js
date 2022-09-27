@@ -1,0 +1,69 @@
+import React from "react";
+
+import * as styles from "./CompareSection.module.sass";
+
+import logo from "../img/logo.svg";
+
+const CompareSection = () => {
+  return (
+    <div className={styles.container} id="compare">
+      <div className={styles.sectionContainer}>
+        <div className={styles.headingContainer}>
+          <h2>Completely safe for your home and our planet</h2>
+          <p>
+            Our company believes in ecology, sustainable consumption and
+            reaching net zero carbon emissions. <br />
+            We are proud to say that Otty was created with these principles in
+            mind
+          </p>
+        </div>
+        <div className={styles.table}>
+          <div className={styles.title}>
+            <h4>Majority of alternatives</h4>
+            <img src={logo} alt="Otty" />
+          </div>
+          <div className={styles.row}>
+            <div className={styles.altCell}>
+              Contain chlorine and other harsh chemicals
+            </div>
+            <div className={styles.cell}>
+              Otty contains NO chlorine, GMOs and harsh chemicals. Perfectly
+              safe for the environment
+            </div>
+          </div>
+          <div className={styles.row}>
+            <div className={styles.altCell}>
+              During the process, they pollute water and nature. Require complex
+              processing at disposal
+            </div>
+            <div className={styles.cell}>
+              During the process, Otty breaks down into water, active oxygen and
+              soda ash. Can be safely poured down the drain
+            </div>
+          </div>
+          <div className={styles.row}>
+            <div className={styles.altCell}>
+              To produce the ingredients for these products, heavy industry is
+              required which produces high emissions
+            </div>
+            <div className={styles.cell}>
+              Otty is made entirely of nautral sodium components.
+            </div>
+          </div>
+          <div className={styles.row}>
+            <div className={styles.altCell}>
+              Чаще всего только заявляют, что используют переработанную упаковкy
+            </div>
+            <div className={styles.cell}>
+              Otty упакован в контейнеры из переработанного пластика по
+              стандарту ________ и после использования 100% упаковок
+              отправляются на переработку
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default CompareSection;

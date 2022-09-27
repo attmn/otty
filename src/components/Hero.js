@@ -23,7 +23,9 @@ const Hero = () => {
             A safe and effective solution for those who care about their
             family’s well-being
           </span>
-          <Button ofType="secondary">Buy now</Button>
+          <Button ofType="secondary" ofSize="large">
+            Buy now
+          </Button>
         </div>
       </div>
       <Media

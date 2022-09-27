@@ -8,7 +8,7 @@ import icon3 from "../img/howto/icon3.svg";
 
 const HowToUseSection = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="how-to-use">
       <div className={styles.sectionContainer}>
         <h2>Where and how to use Otty</h2>
         <div className={styles.blobContainer}>
@@ -16,21 +16,22 @@ const HowToUseSection = () => {
             <img src={icon1} alt="" aria-hidden />
             <h3>Whitening and stain removal</h3>
             <p>
-              Подходит для цветных, темных и белых тканей. Растворите от 0,5 до
-              2 ст.л. средства в расчете на один литр горячей воды в зависимости
-              от степени загрязнения. Замочите в растворе на 15-60 минут. При
-              сильном загрязнении увеличьте время, максимум до 6 часов (for
-              whites only). Not suitable for wool, leather, or silk items.
+              Dissolve 1/4 to 1 scoop (depending on stain) of Otty per 1L of hot
+              water and soak for 15-60min. Suitable for white, black and
+              coloured fabrics. Not suitable for wool, leather, or silk items.{" "}
+              <br />
+              <b>For Whites:</b> up to 6h. <br />
+              <b>For Colours:</b> up to 1h.
             </p>
           </div>
           <div className={styles.blob2}>
             <img src={icon1} alt="" aria-hidden />
             <h3>Removing tougher stains</h3>
             <p>
-              Для удаления трудновыводимых загрязнений обильно смочите пятно
-              горячей водой, равномерно нанесите средство, оставьте действовать
-              на 1 час. Затем прополоскайте и высушите. Not suitable for wool,
-              leather, or silk items.
+              To remove tougher stains mix equal amounts of Otty and hot water.
+              Apply equally to stain and leave for up to 1h (less if coloured).
+              Then rinse or wash, and dry. Not suitable for wool, leather, or
+              silk items.
             </p>
           </div>
         </div>
@@ -38,21 +39,24 @@ const HowToUseSection = () => {
           <div className={styles.blobContainer2}>
             <div className={styles.blob3}>
               <img src={icon2} alt="" aria-hidden />
-              <h3>Boost your washing machine</h3>
+              <h3>
+                Hand & machine wash <br />
+                <span>(30°с - 90°с)</span>
+              </h3>
               <p>
-                Многократно усиливает эффект стирального порошка. Просто
-                добавьте Otty в отсек к вашему основному порошку. Подходит для
-                белых, черных и цветных тканей.
+                Add 1/2 to 1 scoop of Otty (depending on stain) with your
+                washing powder. If using capsules / tablets, just add Otty to
+                the ‘main wash’ compartment. Suitable for white, black and
+                coloured fabrics
               </p>
             </div>
             <div className={styles.blob4}>
               <img src={icon3} alt="" aria-hidden />
               <h3>Cleaning surfaces</h3>
               <p>
-                Смешайте с небольшим количеством горячей воды до образования
-                пасты. Нанесите получившуюся пасту на пятно и оставьте на 15-30
-                минут. Смойте чистой водой и дайте высохнуть. А после просто
-                сотрите грязь тряпкой.
+                Mix with a small amount of water until you get a paste. Apply
+                paste to stain and leave for 15-30min. Rinse with clean water
+                and dry. After that, wipe with a dry clean cloth.
               </p>
             </div>
           </div>
@@ -60,11 +64,12 @@ const HowToUseSection = () => {
             <img src={icon2} alt="" aria-hidden />
             <h3>Cleaning kitchen and tableware</h3>
             <p>
-              Эффективно удаляет даже самый плотный слой жира, налет накипи,
-              въевшиеся пятна от чая и кофе. Кастрюли, сковородки, столовые
-              приборы, посуда. Otty эффективно очищает любые кухонные предметы.
-              Для устранения загрязнения налейте горячую воду до нужного уровня
-              очистки, оставьте на 5-10 минут. Тщательно промойте водой.
+              Effectively removes even the thickest layer of fat, scale buildup
+              or tea / coffee stain. Pots, pans, cutlery, crockery. Otty
+              effectively cleans any kitchenware. Fill the item with hot water
+              up to the desired level of cleaning or place the item inside a
+              container of hot water. Add 1/4 to 1 scoop of Otty per 1L. Leave
+              for 5-10mins. Wash and rinse thoroughly before using.
             </p>
           </div>
         </div>

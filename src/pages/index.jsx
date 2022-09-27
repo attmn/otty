@@ -6,6 +6,8 @@ import Hero from "../components/Hero";
 import AboutSection from "../components/AboutSection";
 import HowToUseSection from "../components/HowToUseSection";
 import VideoSection from "../components/VideoSection";
+import CompareSection from "../components/CompareSection";
+import Wave from "../components/TopWave";
 
 const IndexPage = () => (
   <Layout>
@@ -18,9 +20,15 @@ const IndexPage = () => (
             style={{ marginBottom: "6rem" }}
           >
             <Hero />
+            <Wave />
             <AboutSection />
+            <Wave top />
             <HowToUseSection />
+            <Wave />
             <VideoSection />
+            <Wave top />
+            <CompareSection />
+            <Wave />
             <BlogRoll/>
           </div>
         </div>

@@ -1,0 +1,103 @@
+@use '../styles/tokens'
+
+.container
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    column-gap: 1.2rem
+    padding: 0 2.4rem
+    background-color: tokens.$primary500
+    justify-items: center
+
+.sectionContainer
+    grid-column: 1/5
+    display: flex
+    flex-direction: column
+    align-items: center
+
+.headingContainer
+    text-align: center
+
+    h2
+        color: tokens.$white
+        margin-bottom: 1.2rem
+
+    p
+        color: tokens.$neutral-text-light
+
+.table
+    margin-top: 4.8rem
+    justify-self: center
+
+.title
+    margin-bottom: 2.4rem
+
+    h4
+        color: tokens.$white
+        text-align: center
+
+    h4, img
+        justify-content: center
+
+    img
+        max-height: 2.3rem
+
+.row, .title
+    display: flex
+    flex-direction: column
+    gap: 2.4rem
+
+.row
+    &:not(:last-child)
+        margin-bottom: 6.4rem
+
+.altCell, .cell, .title h4, .title img
+    flex: 1
+    display: flex
+    align-items: center
+
+.altCell, .cell
+    border-radius: 1.6rem
+    padding: 1.6rem
+    font-size: 1.4rem
+    line-height: 1.7
+    font-weight: 500
+
+.altCell
+    border: 0.3rem solid tokens.$white
+    color: tokens.$white
+
+.cell
+    background-color: tokens.$secondary600
+    color: tokens.$white
+
+@media screen and (min-width: 600px)
+
+@media screen and (min-width: 1024px)
+    .container
+        grid-template-columns: repeat(12, 1fr)
+        column-gap: 2.4rem
+        padding: 0 4.8rem
+
+    .sectionContainer
+        grid-column: 3/11
+        grid-row: 1
+
+    .table
+        margin-top: 6.4rem
+
+    .row, .title
+        flex-direction: unset
+
+    .title
+        margin-bottom: 1.2rem
+
+    .row
+        &:not(:last-child)
+            margin-bottom: 2.4rem
+
+    .altCell, .cell
+        border-radius: 2.4rem
+        padding: 2.4rem
+        max-width: 30rem
+
+@media screen and (min-width: 1330px)

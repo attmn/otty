@@ -5,7 +5,7 @@ import Button from "./Button";
 
 const VideoSection = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="examples">
       <div className={styles.sectionContainer}>
         <h2>See Otty in action</h2>
         <div className={styles.videoContainer}>

@@ -4,7 +4,7 @@ import * as styles from "./AboutSection.module.sass";
 
 const AboutSection = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="about">
       <div className={styles.sectionContainer}>
         <h2>
           Whitens, removes stains from coloured, white and black fabrics. Cleans
@@ -55,9 +55,9 @@ const AboutSection = () => {
             <h3>Eco-friendly</h3>
             <p>
               Otty works by releasing active oxygen. After use, it can be poured
-              down the sink drain without fear of polluting the water with
-              harmful chemicals. Our packaging is made from recycled plastic and
-              is widely recycled.
+              down the drain without fear of polluting the water with harmful
+              chemicals. Our packaging is made from recycled plastic and is
+              widely recycled.
             </p>
           </div>
           <div className={styles.smBlobContainer}>

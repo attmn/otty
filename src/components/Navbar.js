@@ -42,22 +42,22 @@ const Navbar = () => {
                 )}
                 {matches.large && (
                   <div id="navMenu" className={styles.menuGrid}>
-                    <Link className={styles.menuItem} to="#about">
+                    <Link className={styles.menuItem} to="/#about">
                       What is Otty?
                     </Link>
-                    <Link className={styles.menuItem} to="#how-to-use">
+                    <Link className={styles.menuItem} to="/#how-to-use">
                       How to use
                     </Link>
-                    <Link className={styles.menuItem} to="#examples">
+                    <Link className={styles.menuItem} to="/#examples">
                       Examples
                     </Link>
-                    <Link className={styles.menuItem} to="#eco">
+                    <Link className={styles.menuItem} to="/#eco">
                       Eco-friendly
                     </Link>
                     <Link className={styles.menuItem} to="/blog">
                       Blog
                     </Link>
-                    <Link className={styles.menuItem} to="#contact">
+                    <Link className={styles.menuItem} to="/#contact">
                       Contact
                     </Link>
                   </div>
@@ -65,9 +65,11 @@ const Navbar = () => {
               </Fragment>
             )}
           </Media>
-          <Button ofType="tertiary" className={styles.button}>
-            Buy now
-          </Button>
+          <Link to="/#buy">
+            <Button ofType="tertiary" className={styles.button}>
+              Buy now
+            </Button>
+          </Link>
           <Modal
             isOpen={modalIsOpen}
             onRequestClose={() => setIsOpen(false)}
