@@ -22,7 +22,7 @@ const Button = ({
 
   return (
     <button
-      className={classNames(className, button, {
+      className={classNames(button, {
         [`${primary}`]: ofType === "primary",
         [`${primaryOutline}`]: ofType === "primaryOutline",
         [`${secondary}`]: ofType === "secondary",

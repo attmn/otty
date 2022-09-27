@@ -2,7 +2,6 @@ import React from "react";
 
 import * as styles from "./BuySection.module.sass";
 
-import logo from "../img/logo.svg";
 import Button from "./Button";
 
 const BuySection = () => {

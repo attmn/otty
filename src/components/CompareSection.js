@@ -52,12 +52,13 @@ const CompareSection = () => {
           </div>
           <div className={styles.row}>
             <div className={styles.altCell}>
-              Чаще всего только заявляют, что используют переработанную упаковкy
+              Contain fragrances, perfumes, enzymes, parabens and/or colouring.
+              Not always safe for allergy sufferers or children
             </div>
             <div className={styles.cell}>
-              Otty упакован в контейнеры из переработанного пластика по
-              стандарту ________ и после использования 100% упаковок
-              отправляются на переработку
+              Otty contains 0% fragrance, perfumes, enzymes, parabens &
+              colouring. This means it's hypoallergenic and safe for children's
+              clothes
             </div>
           </div>
         </div>

@@ -9,6 +9,7 @@ import VideoSection from "../components/VideoSection";
 import CompareSection from "../components/CompareSection";
 import Wave from "../components/TopWave";
 import BuySection from "../components/BuySection";
+import FaqSection from "../components/FaqSection";
 
 const IndexPage = () => (
   <Layout>
@@ -34,6 +35,7 @@ const IndexPage = () => (
             <Wave top />
             <BuySection />
             <Wave />
+            <FaqSection />
           </div>
         </div>
       </div>
