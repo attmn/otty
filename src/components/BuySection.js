@@ -6,7 +6,7 @@ import Button from "./Button";
 
 const BuySection = () => {
   return (
-    <div className={styles.container} id="compare">
+    <div className={styles.container} id="buy">
       <div className={styles.sectionContainer}>
         <img src="" alt="Otty packaging" />
         <div className={styles.textContainer}>

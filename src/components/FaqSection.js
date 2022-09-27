@@ -5,7 +5,7 @@ import * as styles from "./FaqSection.module.sass";
 
 const FaqSection = () => {
   return (
-    <div className={styles.container} id="compare">
+    <div className={styles.container} id="faq">
       <div className={styles.sectionContainer}>
         <h2>Frequently Asked Questions (FAQ)</h2>
         <div className={styles.list}>
