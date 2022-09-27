@@ -30,6 +30,7 @@ const IndexPage = () => (
             <CompareSection />
             <Wave />
             <BlogRoll/>
+            <Wave top />
           </div>
         </div>
       </div>
