@@ -8,6 +8,7 @@ import HowToUseSection from "../components/HowToUseSection";
 import VideoSection from "../components/VideoSection";
 import CompareSection from "../components/CompareSection";
 import Wave from "../components/TopWave";
+import BuySection from "../components/BuySection";
 
 const IndexPage = () => (
   <Layout>
@@ -31,6 +32,8 @@ const IndexPage = () => (
             <Wave />
             <BlogRoll/>
             <Wave top />
+            <BuySection />
+            <Wave />
           </div>
         </div>
       </div>

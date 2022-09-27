@@ -28,6 +28,16 @@
     background-color: tokens.$tertiary500
     color: tokens.$tertiary-textColor500
 
+.whiteOutline
+    background-color: transparent
+    border: 0.2rem solid tokens.$white
+    color: tokens.$white
+
+    &:disabled, .disabled
+        border: 0.2rem solid tokens.$neutral-text-light-disabled
+        color: tokens.$neutral-text-light-disabled
+        pointer-events: none
+
 .large
     padding: 2rem 4.8rem
     font-size: 2rem
