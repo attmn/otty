@@ -30,9 +30,11 @@ const BlogRollTemplate = (props) => {
                 .map(({ node: post }) => <BlogItem post={post} />)}
           </div>
           <div className={styles.btnContainer}>
-            <Button ofType="primary" ofSize="large">
-              View all blog posts
-            </Button>
+            <Link to="/blog">
+              <Button ofType="primary" ofSize="large">
+                View all blog posts
+              </Button>
+            </Link>
           </div>
         </div>
       )}
