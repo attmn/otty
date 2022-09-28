@@ -15,7 +15,7 @@ const BuySection = () => {
             <div className={styles.btnContainer}>
               <Button
                 ofType="tertiary"
-                large
+                ofSize="large"
                 style={{
                   display: "flex",
                   justifyContent: "center",
@@ -25,7 +25,7 @@ const BuySection = () => {
                 Order on <AmazonIcon />
                 Amazon
               </Button>
-              <Button ofType="whiteOutline" isDisabled={true} large>
+              <Button ofType="whiteOutline" isDisabled={true} ofSize="large">
                 Buy here (Coming soon)
               </Button>
             </div>

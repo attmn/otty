@@ -1,0 +1,108 @@
+@use '../styles/tokens'
+
+.container
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    column-gap: 1.2rem
+    padding: 2.4rem 2.4rem 1.6rem 2.4rem
+    background-color: tokens.$primary500
+    justify-items: center
+
+.sectionContainer
+    grid-column: 1/5
+    gap: 6.4rem
+    display: flex
+    flex-direction: column
+    align-items: center
+
+.logo
+    width: 19.6rem
+
+.contactContainer
+    display: flex
+    flex-direction: column
+    gap: 2.4rem
+    align-items: center
+
+    a
+        position: relative
+        color: tokens.$white
+        font-size: 2rem
+        font-weight: 500
+        transition: 0.2s ease-in-out
+
+        &::after
+            content: ''
+            position: absolute
+            bottom: 0
+            left: 0
+            width: 100%
+            height: 0.2rem
+            background-color: tokens.$white
+            opacity: 0
+            transition: opacity 300ms, transform 300ms
+
+        &:hover::after,
+        &:focus-visible::after
+            opacity: 1
+            transform: translate3d(0, 0.2em, 0)
+
+.socialContainer
+    display: flex
+    gap: 2.4rem
+
+    svg
+        fill: tokens.$neutral-text-light
+        transition: 0.2s ease-in-out
+
+        &:hover
+            fill: tokens.$white
+
+.copyright
+    color: tokens.$white
+    font-size: 1.4rem
+    font-weight: 500
+
+.legal
+    margin-top: 0.8rem
+    font-size: 1.3rem
+    display: flex
+    gap: 3.2rem
+    justify-content: center
+
+    a
+        color: tokens.$neutral-text-light
+        line-height: 1.4
+
+        &::after
+            content: ''
+            position: absolute
+            bottom: 0
+            left: 0
+            width: 100%
+            height: 0.1rem
+            background-color: tokens.$white
+            opacity: 0
+            transition: opacity 300ms, transform 300ms
+
+        &:hover::after,
+        &:focus-visible::after
+            opacity: 1
+            transform: translate3d(0, 0.2em, 0)
+
+@media screen and (min-width: 1024px)
+    .container
+        grid-template-columns: repeat(12, 1fr)
+        column-gap: 2.4rem
+        padding: 0 4.8rem 1.6rem 4.8rem
+
+    .sectionContainer
+        grid-column: 3/11
+        grid-row: 1
+
+    .contactContainer
+        a
+            font-size: 2.4rem
+
+    .socialContainer
+        gap: 6.4rem

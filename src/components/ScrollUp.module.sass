@@ -1,0 +1,29 @@
+@use '../styles/tokens'
+
+.container
+    position: fixed
+    bottom: 2.4rem
+    right: 2.4rem
+    cursor: pointer
+    background: none
+    border: none
+
+    svg
+        fill: transparent
+        stroke: tokens.$primary800
+        transition: all 0.2s ease-in
+
+        circle, path
+            transition: all 0.2s ease-in
+
+    &:hover
+        svg
+            fill: tokens.$secondary500
+
+            circle
+                stroke: tokens.$secondary500
+
+            path
+                stroke: tokens.$white
+
+@media screen and (min-width: 1024px)

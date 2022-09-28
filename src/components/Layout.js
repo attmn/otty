@@ -2,6 +2,7 @@ import * as React from "react";
 import { Helmet } from "react-helmet";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import ScrollUp from "../components/ScrollUp";
 import "../styles/all.sass";
 import * as styles from "./Layout.module.sass";
 import useSiteMetadata from "./SiteMetadata";
@@ -50,6 +51,7 @@ const TemplateWrapper = ({ children }) => {
         />
       </Helmet>
       <Navbar />
+      <ScrollUp />
       <div>{children}</div>
     </div>
   );

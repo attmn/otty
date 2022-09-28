@@ -62,17 +62,34 @@
     display: none
 
 .menuItem
+    position: relative
     font-size: 1.6rem
-    line-height: 1
+    line-height: 1.4
     color: tokens.$light
     text-decoration: none
 
-.menuItem:hover
-    font-weight: 600
-    color: tokens.$white
+    &:hover
+        color: tokens.$white
 
-.menuItem:active
-    color: tokens.$white
+    &::after
+        content: ''
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        height: 0.2rem
+        border-radius: 0.1rem
+        background-color: tokens.$white
+        opacity: 0
+        transition: opacity 300ms, transform 300ms
+
+    &:hover::after,
+    &:focus-visible::after
+        opacity: 1
+        transform: translate3d(0, 0.2em, 0)
+
+    &:active
+        color: tokens.$white
 
 .button
     display: none

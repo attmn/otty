@@ -10,17 +10,13 @@ import CompareSection from "../components/CompareSection";
 import Wave from "../components/TopWave";
 import BuySection from "../components/BuySection";
 import FaqSection from "../components/FaqSection";
+import Footer from "../components/Footer";
 
 const IndexPage = () => (
   <Layout>
-    <section className="section">
+    <section >
       <Helmet title={`Otty`} />
-      <div className="container content">
-        <div className="columns">
-          <div
-            className="column is-10 is-offset-1"
-            style={{ marginBottom: "6rem" }}
-          >
+      <div>
             <Hero />
             <Wave />
             <AboutSection />
@@ -36,8 +32,8 @@ const IndexPage = () => (
             <BuySection />
             <Wave />
             <FaqSection />
-          </div>
-        </div>
+            <Wave top />
+            <Footer />
       </div>
     </section>
   </Layout>
