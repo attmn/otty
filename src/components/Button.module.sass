@@ -10,23 +10,43 @@
     border-radius: 3.2rem
     white-space: nowrap
     cursor: pointer
+    transition: all 0.2s ease-in
+
+    &:active
+        transform: scale(0.9)
 
 .primary
     background-color: tokens.$primary700
     color: tokens.$white
+
+    &:hover, &:focus-visible
+        background-color: tokens.$primary500
 
 .primaryOutline
     background-color: transparent
     border: 0.2rem solid tokens.$primary700
     color: tokens.$primary700
 
+    &:hover, &:focus-visible
+        background-color: tokens.$primary700
+        color: tokens.$white
+
 .secondary
     background-color: tokens.$secondary500
     color: tokens.$white
 
+    &:hover, &:focus-visible
+        background-color: tokens.$secondary600
+
 .tertiary
     background-color: tokens.$tertiary500
     color: tokens.$tertiary-textColor500
+
+    &:hover, &:focus-visible
+        background: tokens.$tertiary100
+
+    &:active
+        background-color: tokens.$tertiary500
 
 .whiteOutline
     background-color: transparent
@@ -37,6 +57,10 @@
         border: 0.2rem solid tokens.$neutral-text-light-disabled
         color: tokens.$neutral-text-light-disabled
         pointer-events: none
+
+    &:hover
+        background-color: tokens.$white
+        color: tokens.$primary800
 
 .large
     padding: 2rem 4.8rem

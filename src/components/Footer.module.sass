@@ -57,6 +57,7 @@
 
         &:hover
             fill: tokens.$white
+            transform: scale(1.05)
 
 .copyright
     color: tokens.$white
@@ -89,6 +90,9 @@
         &:focus-visible::after
             opacity: 1
             transform: translate3d(0, 0.2em, 0)
+
+        &:hover, &:focus-visible
+            color: tokens.$white
 
 @media screen and (min-width: 1024px)
     .container

@@ -12,7 +12,7 @@ const BlogRollTemplate = (props) => {
   return (
     <div className={styles.container}>
       <div className={styles.title}>
-        <h2>Read our blog</h2>
+        {props.blogPage ? <h1>Read our blog</h1> : <h2>Read our blog</h2>}
         <p>Find out where and how to use Otty in the most effective way</p>
       </div>
       {props.blogPage ? (

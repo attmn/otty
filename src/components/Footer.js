@@ -48,7 +48,7 @@ const Footer = () => {
               </defs>
             </svg>
           </Link>
-          <Link to="https://tiktok.com/otty.cleaner">
+          <Link to="https://www.tiktok.com/@otty.cleaner">
             <svg
               width="64"
               height="65"
@@ -127,7 +127,7 @@ const Footer = () => {
           </div>
           <div className={styles.legal}>
             <Link to="/terms-conditions">Terms & Conditions</Link>
-            <Link to="/cookies-policy">Cookies Policy</Link>
+            <Link to="/cookies-policy">Cookies & Privacy</Link>
           </div>
         </div>
       </div>

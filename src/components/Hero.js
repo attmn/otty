@@ -12,6 +12,7 @@ import icon3 from "../img/icons/child.svg";
 import icon4 from "../img/icons/chemical.svg";
 import icon5 from "../img/icons/clothes.svg";
 import Media from "react-media";
+import { Link } from "gatsby";
 
 const Hero = () => {
   return (
@@ -23,9 +24,11 @@ const Hero = () => {
             A safe and effective solution for those who care about their
             family’s well-being
           </span>
-          <Button ofType="secondary" ofSize="large">
-            Buy now
-          </Button>
+          <Link to="/#buy">
+            <Button ofType="secondary" ofSize="large">
+              Buy now
+            </Button>
+          </Link>
         </div>
       </div>
       <Media
