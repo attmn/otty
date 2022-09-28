@@ -7,7 +7,7 @@ import "../styles/all.sass";
 import * as styles from "./Layout.module.sass";
 import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
-import Wave from "./TopWave";
+import Wave from "./Wave";
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
@@ -54,7 +54,7 @@ const TemplateWrapper = ({ children }) => {
       <Navbar />
       <ScrollUp />
       <div>{children}</div>
-      <Wave top />
+      <Wave type="top" />
       <Footer />
     </div>
   );

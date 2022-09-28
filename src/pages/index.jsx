@@ -7,7 +7,7 @@ import AboutSection from "../components/AboutSection";
 import HowToUseSection from "../components/HowToUseSection";
 import VideoSection from "../components/VideoSection";
 import CompareSection from "../components/CompareSection";
-import Wave from "../components/TopWave";
+import Wave from "../components/Wave";
 import BuySection from "../components/BuySection";
 import FaqSection from "../components/FaqSection";
 
@@ -19,15 +19,15 @@ const IndexPage = () => (
             <Hero />
             <Wave />
             <AboutSection />
-            <Wave top />
+            <Wave type="top" />
             <HowToUseSection />
             <Wave />
             <VideoSection />
-            <Wave top />
+            <Wave type="top" />
             <CompareSection />
             <Wave />
             <BlogRoll/>
-            <Wave top />
+            <Wave type="top" />
             <BuySection />
             <Wave />
             <FaqSection />
