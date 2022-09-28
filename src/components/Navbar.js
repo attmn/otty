@@ -65,10 +65,8 @@ const Navbar = () => {
               </Fragment>
             )}
           </Media>
-          <Link to="/#buy">
-            <Button ofType="tertiary" className={styles.button}>
-              Buy now
-            </Button>
+          <Link to="/#buy" className={styles.button}>
+            <Button ofType="tertiary">Buy now</Button>
           </Link>
           <Modal
             isOpen={modalIsOpen}

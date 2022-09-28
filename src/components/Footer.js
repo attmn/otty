@@ -2,10 +2,6 @@ import * as React from "react";
 import { Link } from "gatsby";
 
 import logo from "../img/logo.svg";
-import facebook from "../img/social/facebook.svg";
-import instagram from "../img/social/instagram.svg";
-import youtube from "../img/social/youtube.svg";
-import tiktok from "../img/social/tiktok.svg";
 
 import * as styles from "./Footer.module.sass";
 import Button from "./Button";

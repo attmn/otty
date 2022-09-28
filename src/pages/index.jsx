@@ -10,7 +10,6 @@ import CompareSection from "../components/CompareSection";
 import Wave from "../components/TopWave";
 import BuySection from "../components/BuySection";
 import FaqSection from "../components/FaqSection";
-import Footer from "../components/Footer";
 
 const IndexPage = () => (
   <Layout>
@@ -32,8 +31,6 @@ const IndexPage = () => (
             <BuySection />
             <Wave />
             <FaqSection />
-            <Wave top />
-            <Footer />
       </div>
     </section>
   </Layout>
