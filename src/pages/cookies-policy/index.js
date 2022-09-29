@@ -15,7 +15,7 @@ export default class CookiesPolicyPage extends React.Component {
               <p>
                 This privacy policy page will explain how our Organisation uses
                 the personal data we collect from you when you use our Website.
-                Otty Cleaner Ltd. ("we", "us", or "our") is a limited company
+                Teman Ltd. ("we", "us", or "our") is a limited company
                 registered in England & Wales under registration number 12018351
                 and trading under the name Otty.
               </p>

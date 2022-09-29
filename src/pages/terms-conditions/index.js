@@ -20,7 +20,7 @@ export default class TermsConditionsPage extends React.Component {
             <div className={styles.sectionDiv}>
               <h3>INFO ABOUT US</h3>
               <p>
-                Otty Cleaner Ltd. ("we", "us", or "our") is a limited company
+                Teman Ltd. ("we", "us", or "our") is a limited company
                 registered in England & Wales under registration number 12018351
                 and trading under the name Otty. Registered address is Suite
                 1065, Unit 3a 34-35 Hatton Garden, Holborn, London, United
