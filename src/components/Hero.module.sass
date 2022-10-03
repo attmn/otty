@@ -10,8 +10,13 @@
 
 .heroContainer
     grid-column: 1/5
+    display: flex
+    flex-direction: column
+    align-items: center
 
 .headingContainer
+    order: 2
+
     h1, span
         color: tokens.$white
         margin-bottom: 3.2rem
@@ -26,6 +31,13 @@
         font-size: 1.6rem
         max-width: 48rem
 
+.heroImg
+    order: 1
+    filter: drop-shadow(0px 15px 30px rgba(0, 0, 0, 0.15))
+    transform: rotate(11deg)
+    width: 60%
+    margin: 6.4rem 0
+
 @media screen and (min-width: 1024px)
     .container
         grid-template-columns: repeat(12, 1fr)
@@ -35,6 +47,7 @@
     .heroContainer
         grid-column: 3/11
         grid-row: 1
+        flex-direction: row
 
     .marqueeContainer
         grid-column: 1/12
@@ -50,3 +63,6 @@
 
         span
             font-size: 2rem
+
+    .heroImg
+        order: 2

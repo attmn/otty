@@ -6,6 +6,7 @@ import * as marqueeStyles from "./Marquee.module.sass";
 import Button from "./Button";
 import MarqueeItem from "./MarqueeItem";
 
+import mockup from "../img/mockupFront.png";
 import icon1 from "../img/icons/allergy.svg";
 import icon2 from "../img/icons/plant.svg";
 import icon3 from "../img/icons/child.svg";
@@ -30,6 +31,7 @@ const Hero = () => {
             </Button>
           </Link>
         </div>
+        <img src={mockup} alt="" aria-hidden className={styles.heroImg} />
       </div>
       <Media
         q

@@ -92,7 +92,7 @@ const Footer = () => {
               </defs>
             </svg>
           </Link>
-          <Link to="https://youtube.com/">
+          <Link to="https://youtube.com/channel/UC_ccwZcMGHCWDA9NAVZeePw">
             <svg
               width="64"
               height="65"
