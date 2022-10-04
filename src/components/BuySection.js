@@ -1,14 +1,21 @@
 import React from "react";
 
 import * as styles from "./BuySection.module.sass";
-
 import Button from "./Button";
+
+import mockup from "../img/mockupFront.png";
 
 const BuySection = () => {
   return (
     <div className={styles.container} id="buy">
       <div className={styles.sectionContainer}>
-        <img src="" alt="Otty packaging" />
+        <div className={styles.imgContainer}>
+          <img
+            src={mockup}
+            alt="Otty packaging"
+            className={styles.packageImg}
+          />
+        </div>
         <div className={styles.textContainer}>
           <div>
             <h2>Where to buy Otty</h2>

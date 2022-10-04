@@ -32,11 +32,15 @@
         max-width: 48rem
 
 .heroImg
-    order: 1
     filter: drop-shadow(0px 15px 30px rgba(0, 0, 0, 0.15))
     transform: rotate(11deg)
-    width: 60%
+    width: 100%
+
+.imgContainer
+    order: 1
     margin: 6.4rem 0
+    width: 60%
+    max-width: 25rem
 
 @media screen and (min-width: 1024px)
     .container
@@ -64,5 +68,7 @@
         span
             font-size: 2rem
 
-    .heroImg
+    .imgContainer
         order: 2
+        max-width: 40rem
+        margin: 12.8rem 0 3.2rem 9.6rem

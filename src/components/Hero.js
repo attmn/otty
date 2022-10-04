@@ -31,7 +31,9 @@ const Hero = () => {
             </Button>
           </Link>
         </div>
-        <img src={mockup} alt="" aria-hidden className={styles.heroImg} />
+        <div className={styles.imgContainer}>
+          <img src={mockup} alt="" aria-hidden className={styles.heroImg} />
+        </div>
       </div>
       <Media
         q
