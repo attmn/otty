@@ -1,44 +1,27 @@
 @use '../styles/tokens'
 
-.navbarContainer
-    display: grid
-    grid-template-columns: repeat(4, 1fr)
-    column-gap: 1.2rem
-    padding: 0 2.4rem
-    background-color: tokens.$primary700
-    height: 9rem
-    justify-items: center
-
 .modalIsOpen
     position: fixed
     width: calc(100% - 4.8rem)
     z-index: 99
 
-.navbarWave
-    width: 500%
-    transform: translateX(-1%)
-    margin-bottom: -2rem
-
-.navbarBody
-    grid-column: 1/5
+.topContainer
     display: flex
-    justify-content: space-between
-    align-items: center
-    column-gap: 2.4rem
-    max-width: 1824px
-    width: 100%
-    z-index: 31
+    flex-direction: column
 
-.burgerMenu
+    h2
+        color: tokens.$white
+
+.closeBtn
     border: none
     background: none
-    justify-content: center
     transition: 0.4s
     position: relative
     width: 3.5rem
     height: 4.8rem
     padding: 0
     cursor: pointer
+    align-self: flex-end
 
     div
         position: absolute
@@ -50,13 +33,6 @@
         transition: 0.25s ease-in-out
 
     div:first-child
-        top: 1.6rem
-
-    div:last-child
-        top: 2.8rem
-
-.burgerMenuActive
-    div:first-child
         top: 1.75rem
         transform: rotate(45deg)
 
@@ -64,41 +40,42 @@
         top: 1.75rem
         transform: rotate(-45deg)
 
-.menuGrid
-    display: none
+.contactForm
+    -webkit-appearance: none
+    justify-self: center
 
-.menuItem
-    position: relative
+.contactForm label
+    display: block
+    font-size: 1.4rem
+    margin-top: 1.4rem
+    color: tokens.$white
+
+.contactForm input[type="text"],
+.contactForm input[type="email"],
+.contactForm input[type="tel"],
+.contactForm textarea
+    width: 100%
+    padding: 1.2rem 1.6rem
+    margin-top: 0.6rem
+
+    box-sizing: border-box
+    -webkit-box-sizing: border-box
+    -webkit-appearance: none
+
     font-size: 1.6rem
-    line-height: 1.4
-    color: tokens.$light
-    text-decoration: none
 
-    &:hover
-        color: tokens.$white
+    border: none
+    border-radius: 10px
 
-    &::after
-        content: ''
-        position: absolute
-        bottom: 0
-        left: 0
-        width: 100%
-        height: 0.2rem
-        border-radius: 0.1rem
-        background-color: tokens.$white
-        opacity: 0
-        transition: opacity 300ms, transform 300ms
+    &:focus-visible
+        border: none
+        outline: none
 
-    &:hover::after,
-    &:focus-visible::after
-        opacity: 1
-        transform: translate3d(0, 0.2em, 0)
+.contactForm textarea
+    height: 10rem
 
-    &:active
-        color: tokens.$white
-
-.button
-    display: none
+.contactForm button
+    margin-top: 1.6rem
 
 /* ------- MODAL MENU -------- */
 .modalOverlay
@@ -129,7 +106,6 @@
     height: 100vh
 
 .modalContent
-    margin-top: 9rem
     padding: 2.4rem
     display: flex
     flex-direction: column
@@ -138,40 +114,28 @@
     .menuItem
         font-size: 2.4rem
 
-    button
-        margin-top: 2.4rem
-
 @media screen and (min-width: 1024px)
-    .navbarContainer
-        grid-template-columns: repeat(12, 1fr)
-        column-gap: 2.4rem
-        padding: 0 4.8rem
-        height: 9rem
-
-    .navbarWave
-        width: 100%
-        transform: unset
-
-    .navbarBody
-        grid-column: 2/12
-        display: flex
-        justify-content: space-between
-        align-items: center
-        column-gap: 2.4rem
-        max-width: 1824px
-        width: 100%
-
-    .menuGrid
-        width: 100%
-        display: flex
-        align-items: center
-        align-content: center
-        justify-content: center
-        gap: 4.8rem
-
     .modalOverlay
-        display: none
+        background: hsla(0, 0%, 0%, 0.35)
+        filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.25))
+
+    .modalBackground
+        width: unset
+        height: unset
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+        display: flex
+        justify-content: center
+        border-radius: 2rem
+
+    .modalContent
+        padding: 6.4rem
+        max-width: 60rem
+
+    .closeBtn
+        position: absolute
+        right: 2.4rem
+        top: 2.4rem
 
 @media screen and (min-width: 1200px)
-    .button
-        display: block

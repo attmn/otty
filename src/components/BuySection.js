@@ -4,6 +4,7 @@ import * as styles from "./BuySection.module.sass";
 import Button from "./Button";
 
 import mockup from "../img/mockupFront.png";
+import ContactForm from "./ContactForm";
 
 const BuySection = () => {
   return (
@@ -39,7 +40,7 @@ const BuySection = () => {
           </div>
           <div>
             <h4>Interested in stocking Otty?</h4>
-            <Button ofType="whiteOutline">Become a partner</Button>
+            <ContactForm ofType="whiteOutline" text="Become a partner" />
           </div>
         </div>
       </div>

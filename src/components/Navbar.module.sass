@@ -107,8 +107,6 @@
     position: fixed
     inset: 0px
     background: none
-    opacity: 0
-    animation: fadeIn 300ms forwards ease-in-out
     z-index: 30
 
 @keyframes fadeIn
@@ -139,9 +137,36 @@
 
     .menuItem
         font-size: 2.4rem
+        opacity: 0
+        animation: fadeIn2 0.3s ease-in-out forwards
+
+        &:nth-child(2)
+            animation-delay: 0.05s
+
+        &:nth-child(3)
+            animation-delay: 0.07s
+
+        &:nth-child(4)
+            animation-delay: 0.09s
+
+        &:nth-child(5)
+            animation-delay: 0.11s
+
+        &:nth-child(6)
+            animation-delay: 0.13s
+
+    @keyframes fadeIn2
+        50%
+            opacity: 0
+
+        100%
+            opacity: 1
 
     button
         margin-top: 2.4rem
+        opacity: 0
+        animation: fadeIn2 0.5s ease-in-out forwards
+        animation-delay: 0.13s
 
 @media screen and (min-width: 1024px)
     .navbarContainer

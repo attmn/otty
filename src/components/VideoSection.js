@@ -1,4 +1,5 @@
-import React from "react";
+import React, { Fragment } from "react";
+import Media from "react-media";
 
 import * as styles from "./VideoSection.module.sass";
 import Button from "./Button";
@@ -19,35 +20,77 @@ const VideoSection = () => {
             <div className={styles.video} />
           </div>
         </div>
-        <div className={styles.btnContainer}>
-          <Link to="https://www.tiktok.com/@otty.cleaner">
-            <Button
-              ofType="primary"
-              ofSize="large"
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                gap: "0.8rem",
-              }}
-            >
-              See more on <TikTok />
-              TikTok
-            </Button>
-          </Link>
-          <Link to="https://instagram.com/otty.cleaner">
-            <Button
-              ofType="primaryOutline"
-              ofSize="large"
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                gap: "0.8rem",
-              }}
-            >
-              See more on <Instagram /> Instagram
-            </Button>
-          </Link>
-        </div>
+        <Media
+          queries={{
+            small: "(max-width: 600px)",
+          }}
+        >
+          {(matches) => (
+            <Fragment>
+              {matches.small ? (
+                <div className={styles.btnContainer}>
+                  <Link to="https://www.tiktok.com/@otty.cleaner">
+                    <Button
+                      ofType="primary"
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        gap: "0.8rem",
+                      }}
+                      isWide
+                    >
+                      See more on <TikTok />
+                      TikTok
+                    </Button>
+                  </Link>
+                  <Link to="https://instagram.com/otty.cleaner">
+                    <Button
+                      ofType="primaryOutline"
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        gap: "0.8rem",
+                      }}
+                      isWide
+                    >
+                      See more on <Instagram /> Instagram
+                    </Button>
+                  </Link>
+                </div>
+              ) : (
+                <div className={styles.btnContainer}>
+                  <Link to="https://www.tiktok.com/@otty.cleaner">
+                    <Button
+                      ofType="primary"
+                      ofSize="large"
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        gap: "0.8rem",
+                      }}
+                    >
+                      See more on <TikTok />
+                      TikTok
+                    </Button>
+                  </Link>
+                  <Link to="https://instagram.com/otty.cleaner">
+                    <Button
+                      ofType="primaryOutline"
+                      ofSize="large"
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        gap: "0.8rem",
+                      }}
+                    >
+                      See more on <Instagram /> Instagram
+                    </Button>
+                  </Link>
+                </div>
+              )}
+            </Fragment>
+          )}
+        </Media>
       </div>
     </div>
   );

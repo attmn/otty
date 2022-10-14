@@ -12,7 +12,7 @@ import Wave from "./Wave";
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
   return (
-    <div className={styles.layoutContainer}>
+    <div>
       <Helmet>
         <html lang="en" />
         <title>{title}</title>

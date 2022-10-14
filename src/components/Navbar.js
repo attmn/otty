@@ -110,60 +110,54 @@ const ModalMenu = (props) => {
   return (
     <div className={styles.modalBackground}>
       <div className={styles.modalContent}>
-        <div>
-          <Link
-            className={styles.menuItem}
-            to="/#about"
-            onClick={() => props.setIsOpen(false)}
-          >
-            What is Otty?
-          </Link>
-        </div>
-        <div>
-          <Link
-            className={styles.menuItem}
-            to="/#how-to-use"
-            onClick={() => props.setIsOpen(false)}
-          >
-            How to use
-          </Link>
-        </div>
-        <div>
-          <Link
-            className={styles.menuItem}
-            to="/#examples"
-            onClick={() => props.setIsOpen(false)}
-          >
-            Examples
-          </Link>
-        </div>
-        <div>
-          <Link
-            className={styles.menuItem}
-            to="/#eco"
-            onClick={() => props.setIsOpen(false)}
-          >
-            Eco-friendly
-          </Link>
-        </div>
-        <div>
-          <Link
-            className={styles.menuItem}
-            to="/blog"
-            onClick={() => props.setIsOpen(false)}
-          >
-            Blog
-          </Link>
-        </div>
-        <div>
-          <Link
-            className={styles.menuItem}
-            to="/#contact"
-            onClick={() => props.setIsOpen(false)}
-          >
-            Contact
-          </Link>
-        </div>
+        <Link
+          className={styles.menuItem}
+          to="/#about"
+          onClick={() => props.setIsOpen(false)}
+        >
+          What is Otty?
+        </Link>
+
+        <Link
+          className={styles.menuItem}
+          to="/#how-to-use"
+          onClick={() => props.setIsOpen(false)}
+        >
+          How to use
+        </Link>
+
+        <Link
+          className={styles.menuItem}
+          to="/#examples"
+          onClick={() => props.setIsOpen(false)}
+        >
+          Examples
+        </Link>
+
+        <Link
+          className={styles.menuItem}
+          to="/#eco"
+          onClick={() => props.setIsOpen(false)}
+        >
+          Eco-friendly
+        </Link>
+
+        <Link
+          className={styles.menuItem}
+          to="/blog"
+          onClick={() => props.setIsOpen(false)}
+        >
+          Blog
+        </Link>
+
+        <Link
+          className={styles.menuItem}
+          to="/#contact"
+          onClick={() => props.setIsOpen(false)}
+        >
+          Contact
+        </Link>
+
         <Link to="/#buy">
           <Button
             ofType="tertiary"

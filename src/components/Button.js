@@ -7,6 +7,7 @@ const Button = ({
   ofType = "primary",
   ofSize,
   isDisabled,
+  isWide,
   ...props
 }) => {
   const {
@@ -17,6 +18,7 @@ const Button = ({
     tertiary,
     whiteOutline,
     large,
+    wide,
   } = styles;
   const { className, ...otherProps } = props;
 
@@ -29,6 +31,7 @@ const Button = ({
         [`${tertiary}`]: ofType === "tertiary",
         [`${whiteOutline}`]: ofType === "whiteOutline",
         [`${large}`]: ofSize === "large",
+        [`${wide}`]: isWide === true,
       })}
       {...otherProps}
       disabled={isDisabled}

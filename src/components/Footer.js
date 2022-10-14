@@ -5,19 +5,22 @@ import logo from "../img/logo.svg";
 
 import * as styles from "./Footer.module.sass";
 import Button from "./Button";
+import ContactForm from "./ContactForm";
 
 const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className={styles.container}>
+    <footer className={styles.container} id="contact">
       <div className={styles.sectionContainer}>
         <img src={logo} alt="Otty" className={styles.logo} />
         <div className={styles.contactContainer}>
           <a href="mailto:info@ottycleaner.co.uk">info(at)ottycleaner.co.uk</a>
-          <Button ofType="whiteOutline" ofSize="large">
-            Become a partner
-          </Button>
+          <ContactForm
+            ofType="whiteOutline"
+            ofSize="large"
+            text="Become a partner"
+          />
         </div>
         <div className={styles.socialContainer}>
           <Link to="https://instagram.com/otty.cleaner">
