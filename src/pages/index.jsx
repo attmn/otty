@@ -17,7 +17,7 @@ const IndexPage = () => (
       <Helmet title={`Otty`} />
       <div>
             <Hero />
-            <Wave />
+            <Wave type="botShort" />
             <AboutSection />
             <Wave type="top" />
             <HowToUseSection />

@@ -16,6 +16,22 @@ const Wave = (props) => {
           />
         </svg>
       );
+
+    case "botShort":
+      return (
+        <svg
+          viewBox="0 0 1959 63"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="botWaveShort"
+        >
+          <path
+            d="M0 43.9495C30 43.9495 71.6 26.7358 278 43.9495C536 65.4666 630 60.5201 796.5 49.6379C963 38.7557 1193 55.821 1412 62.4987C1569.52 67.3017 1675.5 35.7878 1959 44.6915V0.5H0V43.9495Z"
+            fill="#59C3AC"
+          />
+        </svg>
+      );
+
     default:
       return (
         <svg
