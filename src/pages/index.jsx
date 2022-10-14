@@ -1,5 +1,6 @@
-import * as React from "react";
+import React, { Fragment } from "react";
 import { Helmet } from "react-helmet";
+import Media from "react-media";
 import Layout from "../components/Layout";
 import BlogRoll from "../components/BlogRoll"
 import Hero from "../components/Hero";
@@ -17,7 +18,21 @@ const IndexPage = () => (
       <Helmet title={`Otty`} />
       <div>
             <Hero />
-            <Wave type="botShort" />
+            <Media
+              queries={{
+                small: "(max-width: 600px)",
+              }}
+            >
+              {(matches) => (
+                <Fragment>
+                  {matches.small ? (
+                  <Wave />
+                  ) : (
+                    <Wave type="botShort" />
+                  )}
+                </Fragment>
+              )}
+            </Media>
             <AboutSection />
             <Wave type="top" />
             <HowToUseSection />

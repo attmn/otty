@@ -54,7 +54,6 @@ const Hero = () => {
         </div>
       </div>
       <Media
-        q
         queries={{
           small: "(max-width: 600px)",
           large: "(min-width: 1200px)",
