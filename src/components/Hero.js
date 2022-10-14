@@ -1,5 +1,7 @@
 import React, { Fragment } from "react";
 import Marquee from "react-fast-marquee";
+import Media from "react-media";
+import { Link } from "gatsby";
 
 import * as styles from "./Hero.module.sass";
 import * as marqueeStyles from "./Marquee.module.sass";
@@ -12,12 +14,28 @@ import icon2 from "../img/icons/plant.svg";
 import icon3 from "../img/icons/child.svg";
 import icon4 from "../img/icons/chemical.svg";
 import icon5 from "../img/icons/clothes.svg";
-import Media from "react-media";
-import { Link } from "gatsby";
+import Circle from "./elements/Circle";
+import Medusa from "./elements/Medusa";
+import Fish from "./elements/Fish";
+import Seaweed from "./elements/Seaweed";
 
 const Hero = () => {
   return (
     <div className={styles.container}>
+      <div className={styles.elementContainer}>
+        <Circle number="2" />
+        <Circle number="2" />
+        <Circle number="4" />
+        <Medusa number="1" />
+        <Medusa number="2" />
+        <Fish number="group2" />
+        <Fish number="group4" />
+        <Seaweed number="1" />
+        <Seaweed number="2" />
+        <Seaweed number="2" />
+        <Seaweed number="1" />
+        <Fish number="group1" />
+      </div>
       <div className={styles.heroContainer}>
         <div className={styles.headingContainer}>
           <h1>All-purpose oxygen cleaner Otty</h1>
@@ -44,16 +62,15 @@ const Hero = () => {
       >
         {(matches) => (
           <Fragment>
-            {matches.small && (
+            {!matches.large ? (
               <div className={marqueeStyles.marqueeContainer}>
                 <MarqueeItem icon={icon1}>Hypoallergenic</MarqueeItem>
                 <MarqueeItem icon={icon2}>Eco-friendly</MarqueeItem>
-                <MarqueeItem icon={icon3}>Child safe</MarqueeItem>
                 <MarqueeItem icon={icon4}>Chlorine & GMO free</MarqueeItem>
+                <MarqueeItem icon={icon3}>Child safe</MarqueeItem>
                 <MarqueeItem icon={icon5}>Colours & darks safe</MarqueeItem>
               </div>
-            )}
-            {matches.large && (
+            ) : (
               <Marquee
                 className={marqueeStyles.marqueeContainer}
                 gradient={false}
