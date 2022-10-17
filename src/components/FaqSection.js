@@ -9,14 +9,54 @@ const FaqSection = () => {
       <div className={styles.sectionContainer}>
         <h2>Frequently Asked Questions (FAQ)</h2>
         <div className={styles.list}>
-          <Accordion question="Question">Answer</Accordion>
-          <Accordion question="Question">Answer</Accordion>
-          <Accordion question="Question">Answer</Accordion>
-          <Accordion question="Question">Answer</Accordion>
-          <Accordion question="Question">Answer</Accordion>
-          <Accordion question="Question">Answer</Accordion>
-          <Accordion question="Question">Answer</Accordion>
-          <Accordion question="Question">Answer</Accordion>
+          <Accordion question="How safe is Otty?">
+            Our stain remover is 100% safe. In the process it decomposes into
+            water, active oxygen and soda. No chlorine or other harmful
+            chemicals. Otty is suitable for children's clothing and completely
+            safe for people with allergies
+          </Accordion>
+          <Accordion question="Which type of stains can Otty remove?">
+            Otty's is designed to eliminate organic-based stains. Otty
+            effortlessly removes any food or drink, scale, dirt, soot, and fat.
+            However, inorganic stains like rust, paint, cosmetics, adhesives,
+            and technical fluids are more difficult to remove
+          </Accordion>
+          <Accordion question="How do I clean clothes with Otty?">
+            Otty is suitable for both hand and machine wash, as well as soaking
+            your clothes. It can safely remove stains from any colour and whiten
+            the whites, without damaging your coloured and dark clothes. You can
+            find detailed instructions on our website and our packaging
+          </Accordion>
+          <Accordion question="How do I clean kitchenware with Otty?">
+            To remove stains, fill the item with hot water up to the desired
+            level of cleaning or place the item inside a container of hot water.
+            Add 1/2 to 2 scoop of Otty per 1L. Leave for 15-30mins. Wash and
+            rinse thoroughly before using
+          </Accordion>
+          <Accordion question="How do I clean surfaces with Otty?">
+            Mix with a small amount of water until you get a paste. Apply paste
+            to stain and leave for 15-30min. Rinse with clean water and dry
+          </Accordion>
+          <Accordion question="Can Otty get rid of old stubborn stains?">
+            Yes, even old tough stains can be removed with Otty. You just need
+            to mix Otty into a paste (See instructions) and apply it to the
+            existing stain to do this. Place the fabric in the washing machine
+            after applying the paste to the stain. Active oxygen will enhance
+            the power of the washing powder and completely remove the old stain
+          </Accordion>
+          <Accordion question="Which fabrics shouldn't be used with Otty?">
+            Otty shouldn't be used with delicate fabrics such as silk, wool,
+            down feather and membrane fabrics. See our packaging for full safety
+            information
+          </Accordion>
+          <Accordion question="Which materials/surfaces shouldn't be used with Otty?">
+            Due to the process of oxygen evolution, you should avoid using Otty
+            on copper, aluminium and finished or coated surfaces such as painted
+            surfaces, metals, polished wood. These surfaces will oxidise and
+            deteriorate when in contact with Otty or their coating will be
+            damaged. Do not soak fabrics with metal fasteners or flame-resistant
+            finishes. See our packaging for full safety information
+          </Accordion>
         </div>
       </div>
     </div>

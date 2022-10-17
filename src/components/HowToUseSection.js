@@ -44,10 +44,10 @@ const HowToUseSection = () => {
                 <span>(30°с - 90°с)</span>
               </h3>
               <p>
-                Add 1/2 to 1 scoop of Otty (depending on stain) with your
-                washing powder. If using capsules / tablets, just add Otty to
-                the ‘main wash’ compartment. Suitable for white, black and
-                coloured fabrics
+                Add 1/2 to 1 scoop of Otty (depending on stains) with your
+                washing powder. If using capsules/tablets, just add Otty to the
+                ‘main wash’ compartment. Suitable for white, black and coloured
+                fabrics
               </p>
             </div>
             <div className={styles.blob4}>
@@ -61,15 +61,15 @@ const HowToUseSection = () => {
             </div>
           </div>
           <div className={styles.blob5}>
-            <img src={icon2} alt="" aria-hidden />
+            <img src={icon1} alt="" aria-hidden />
             <h3>Cleaning kitchen and tableware</h3>
             <p>
               Effectively removes even the thickest layer of fat, scale buildup
-              or tea / coffee stain. Pots, pans, cutlery, crockery. Otty
+              or tea/coffee stain. Pots, pans, cutlery, crockery. Otty
               effectively cleans any kitchenware. Fill the item with hot water
               up to the desired level of cleaning or place the item inside a
-              container of hot water. Add 1/4 to 1 scoop of Otty per 1L. Leave
-              for 5-10mins. Wash and rinse thoroughly before using.
+              container of hot water. Add 1/2 to 2 scoops of Otty per 1L. Leave
+              for 15-30mins. Wash and rinse thoroughly before using.
             </p>
           </div>
         </div>

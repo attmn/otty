@@ -4,7 +4,7 @@ import * as styles from "./Marquee.module.sass";
 const MarqueeItem = ({ children, icon }) => {
   return (
     <div className={styles.marqueeItem}>
-      <img src={icon} />
+      <img src={icon} alt="" aria-hidden />
       <span>{children}</span>
     </div>
   );

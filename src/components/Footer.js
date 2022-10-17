@@ -4,7 +4,6 @@ import { Link } from "gatsby";
 import logo from "../img/logo.svg";
 
 import * as styles from "./Footer.module.sass";
-import Button from "./Button";
 import ContactForm from "./ContactForm";
 
 const Footer = () => {
