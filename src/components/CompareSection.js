@@ -3,6 +3,7 @@ import React from "react";
 import * as styles from "./CompareSection.module.sass";
 
 import logo from "../img/logo.svg";
+import Media from "react-media";
 
 const CompareSection = () => {
   return (
@@ -20,6 +21,9 @@ const CompareSection = () => {
         <div className={styles.table}>
           <div className={styles.title}>
             <h4>Majority of alternatives</h4>
+            <Media query="(max-width: 1023px)">
+              {(matches) => matches && <span>VS</span>}
+            </Media>
             <img src={logo} alt="Otty" />
           </div>
           <div className={styles.row}>
