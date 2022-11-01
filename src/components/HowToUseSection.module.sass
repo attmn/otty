@@ -1,6 +1,7 @@
 @use '../styles/tokens'
 
 .container
+    position: relative
     display: grid
     grid-template-columns: repeat(4, 1fr)
     column-gap: 1.2rem
@@ -15,6 +16,7 @@
 
 .sectionContainer
     grid-column: 1/5
+    z-index: 2
 
     h2
         color: tokens.$white
@@ -69,6 +71,125 @@
     padding: 9rem 3rem
     background-image: url('../img/howto/mobile/blob4.svg')
 
+.elementContainer
+    width: 100%
+    height: 100%
+    z-index: 1
+
+    svg
+        position: absolute
+
+        //Circles
+        &:nth-child(1)
+            top: 5%
+            left: -4%
+            width: 4rem
+
+        &:nth-child(2)
+            top: 21%
+            right: 5%
+            width: 3.5rem
+
+        &:nth-child(3)
+            top: 42%
+            right: -3rem
+            width: 6rem
+
+        &:nth-child(4)
+            top: 53%
+            right: 10%
+            width: 3.5rem
+
+        &:nth-child(5)
+            bottom: 19%
+            right: -1.5rem
+            width: 4rem
+
+        //Medusas
+        &:nth-child(6)
+            left: -2rem
+            width: 14rem
+            top: 40%
+
+        &:nth-child(7)
+            bottom: -3%
+            right: 6%
+            width: 10rem
+            transform: rotate(-15deg)
+
+        //Fish
+        &:nth-child(9)
+            top: 3%
+            width: 15rem
+            right: -5%
+            transform: scaleX(-1)
+
+        &:nth-child(8)
+            top: 23%
+            left: -20%
+            width: 18rem
+
+        &:nth-child(10)
+            top: 55%
+            right: 0rem
+            width: 15rem
+
+        &:nth-child(11)
+            top: 75%
+            left: -5rem
+            width: 15rem
+
+        &:nth-child(19)
+            top: 85%
+            left: -10rem
+            width: 15rem
+            transform: scaleX(-1)
+
+        //Seaweed
+        &:nth-child(12)
+            top: -1%
+            width: 9rem
+            right: -1rem
+            transform: rotate(-45deg)
+
+        &:nth-child(13)
+            width: 6rem
+            top: 16%
+            left: -2rem
+            transform: rotate(-90deg)
+
+        &:nth-child(14)
+            width: 6rem
+            top: 25%
+            right: 0rem
+
+        &:nth-child(15)
+            width: 5rem
+            top: 50%
+            right: -2rem
+
+        &:nth-child(17)
+            width: 5rem
+            top: 39%
+            right: 20%
+            transform: scaleX(-1)
+
+        &:nth-child(16)
+            width: 9rem
+            top: 58%
+            left: -2rem
+
+        &:nth-child(18)
+            width: 7rem
+            top: 72%
+            right: 5%
+
+        &:nth-child(20)
+            width: 7rem
+            bottom: -5rem
+            left: 15%
+            transform: scaleX(-1) rotateZ(20deg)
+
 @media screen and (min-width: 600px)
     .blobCircle
         width: 4.8rem
@@ -118,7 +239,7 @@
         transform: unset
 
     .sectionContainer
-        grid-column: 3/11
+        grid-column: 2/12
         grid-row: 1
 
     .blob1, .blob2, .blob3, .blob4, .blob5
@@ -170,3 +291,7 @@
 
     .blob5
         margin-top: 19.6rem
+
+@media screen and (min-width: 1500px)
+    .sectionContainer
+        grid-column: 3/11

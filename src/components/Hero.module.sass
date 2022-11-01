@@ -35,14 +35,12 @@
 
 .heroImg
     filter: drop-shadow(0px 15px 30px rgba(0, 0, 0, 0.15))
-    transform: rotate(11deg)
     width: 100%
 
 .imgContainer
     order: 1
-    margin: 9.6rem 0 6.4rem 0
-    width: 60%
-    max-width: 25rem
+    margin: 9.6rem 0 3.2rem 0
+    width: 100%
 
 .elementContainer
 
@@ -55,7 +53,7 @@
 
         //Circles
         &:nth-child(1)
-            top: 5%
+            top: 1%
             left: 5%
             width: 4rem
 
@@ -73,7 +71,7 @@
         &:nth-child(4)
             right: -1.6rem
             width: 14rem
-            top: 25%
+            top: 30%
 
         &:nth-child(5)
             bottom: 3%
@@ -124,7 +122,7 @@
         padding: 0 4.8rem 2.4rem 4.8rem
 
     .heroContainer
-        grid-column: 3/11
+        grid-column: 2/12
         grid-row: 1
         flex-direction: row
 
@@ -140,8 +138,8 @@
 
     .imgContainer
         order: 2
-        max-width: 40rem
-        margin: 12.8rem 0 3.2rem 9.6rem
+        margin: 12.8rem 0 3.2rem 0
+        width: 80%
 
     .elementContainer
         svg
@@ -201,7 +199,14 @@
             &:nth-child(11)
                 display: none
 
+@media screen and (min-width: 1500px)
+    .heroContainer
+        grid-column: 3/11
+
 @media screen and ( min-width: 1920px )
     .headingContainer
         h1
             font-size: 9.6rem
+
+    .imgContainer
+        margin: 16rem -6.4rem 3.2rem -12.8rem

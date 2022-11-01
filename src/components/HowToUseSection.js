@@ -5,10 +5,36 @@ import * as styles from "./HowToUseSection.module.sass";
 import icon1 from "../img/howto/icon1.svg";
 import icon2 from "../img/howto/icon2.svg";
 import icon3 from "../img/howto/icon3.svg";
+import Circle from "./elements/Circle";
+import Medusa from "./elements/Medusa";
+import Fish from "./elements/Fish";
+import Seaweed from "./elements/Seaweed";
 
 const HowToUseSection = () => {
   return (
     <div className={styles.container} id="how-to-use">
+      <div className={styles.elementContainer}>
+        <Circle number="2" />
+        <Circle number="3" />
+        <Circle number="1" />
+        <Circle number="4" />
+        <Circle number="2" />
+        <Medusa number="1" />
+        <Medusa number="2" />
+        <Fish number="group2" />
+        <Fish number="group1" />
+        <Fish number="group1" />
+        <Fish number="group3" />
+        <Seaweed number="1" />
+        <Seaweed number="1" />
+        <Seaweed number="1" />
+        <Seaweed number="2" />
+        <Seaweed number="1" />
+        <Seaweed number="2" />
+        <Seaweed number="1" />
+        <Fish number="group2" />
+        <Seaweed number="2" />
+      </div>
       <div className={styles.sectionContainer}>
         <h2>Where and how to use Otty</h2>
         <div className={styles.blobContainer}>

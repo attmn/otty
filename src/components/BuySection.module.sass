@@ -36,13 +36,11 @@
         color: tokens.$black
 
 .imgContainer
-    margin: 6.4rem 0
-    width: 60%
-    max-width: 25rem
+    margin: 6.4rem 0 3.2rem 0
+    width: 100%
 
 .packageImg
     filter: drop-shadow(0px 15px 30px rgba(0, 0, 0, 0.15))
-    transform: rotate(-11deg)
     width: 100%
 
 @media screen and (min-width: 600px)
@@ -54,12 +52,16 @@
         padding: 0 4.8rem
 
     .sectionContainer
-        grid-column: 3/11
+        grid-column: 2/12
         grid-row: 1
-        flex-direction: row
+        display: grid
+        grid-template-columns: 1fr 1fr
+        column-gap: 2.4rem
 
     .imgContainer
-        max-width: 35rem
-        margin: 12.8rem 9.6rem 3.2rem 0
+        max-width: 70rem
+        margin-left: -6.4rem
 
-@media screen and (min-width: 1330px)
+@media screen and (min-width: 1500px)
+    .sectionContainer
+        grid-column: 3/11
