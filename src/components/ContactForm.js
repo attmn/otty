@@ -1,6 +1,4 @@
-import React, { useState, Fragment } from "react";
-import { Link } from "gatsby";
-import Media from "react-media";
+import React, { useState } from "react";
 import Modal from "react-modal";
 
 import * as styles from "./ContactForm.module.sass";

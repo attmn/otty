@@ -1,5 +1,7 @@
 import React from "react";
+import Button from "./Button";
 import * as styles from "./CookieNotice.module.sass";
+import cookie from "../img/cookie.svg";
 
 function checkACookieExists() {
   if (
@@ -38,13 +40,20 @@ const CookieNotice = () => {
       disableStr + "=true; expires=Thu, 31 Dec 2099 23:59:59 UTC;path=/";
     return (
       <div className={styles.container}>
+        <img src={cookie} alt="" aria-hidden></img>
         <h3>We use cookies</h3>
         <p>
           Cookies help us deliver the best experience on our website, By using
           our website, you agree to the use of cookies. Learn more.
         </p>
-        <button onClick={() => acceptCookies()}>Accept all cookies</button>
-        <button onClick={() => rejectCokies()}>
+        <Button onClick={() => acceptCookies()} isWide>
+          Accept all cookies
+        </Button>
+        <button
+          ofType="primaryOutline"
+          onClick={() => rejectCokies()}
+          className={styles.rejectBtn}
+        >
           Use only necessary cookies
         </button>
       </div>
