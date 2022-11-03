@@ -3,6 +3,7 @@ import Button from "./Button";
 import * as styles from "./CookieNotice.module.sass";
 import cookie from "../img/cookie.svg";
 import { document } from "browser-monads";
+import { Link } from "gatsby";
 
 const CookieNotice = () => {
   const [cookieExists, setCookieExists] = useState(
@@ -36,8 +37,8 @@ const CookieNotice = () => {
   };
 
   return (
-    <>
-      {cookieExists === false && (
+    <div>
+      {cookieExists !== false ? null : (
         <div
           style={{
             opacity: isVisible,
@@ -48,7 +49,8 @@ const CookieNotice = () => {
           <h3>We use cookies</h3>
           <p>
             Cookies help us deliver the best experience on our website, By using
-            our website, you agree to the use of cookies. Learn more.
+            our website, you agree to the use of cookies.{" "}
+            <Link to="/cookies-policy">Learn more</Link>
           </p>
           <Button onClick={() => acceptCookies()} isWide>
             Accept all cookies
@@ -62,7 +64,7 @@ const CookieNotice = () => {
           </button>
         </div>
       )}
-    </>
+    </div>
   );
 };
 
