@@ -39,10 +39,10 @@ const CookieNotice = () => {
     <>
       {cookieExists === false && (
         <div
-          className={styles.container}
           style={{
             opacity: isVisible,
           }}
+          className={styles.container}
         >
           <img src={cookie} alt="" aria-hidden></img>
           <h3>We use cookies</h3>
