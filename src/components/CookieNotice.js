@@ -12,6 +12,7 @@ const CookieNotice = () => {
       ? true
       : false
   );
+  const [isVisible, setIsVisible] = useState("");
 
   const acceptCookies = () => {
     document.cookie =
@@ -22,6 +23,10 @@ const CookieNotice = () => {
   let gaProperty = "G-7MVZD0BJZG";
   const disableStr = "ga-disable-" + gaProperty;
 
+  setTimeout(() => {
+    setIsVisible("1");
+  }, 2000);
+
   const rejectCokies = () => {
     document.cookie =
       "acceptCookies=false; SameSite=None; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/";
@@ -30,30 +35,35 @@ const CookieNotice = () => {
     setCookieExists(true);
   };
 
-  if (cookieExists === false) {
-    return (
-      <div className={styles.container}>
-        <img src={cookie} alt="" aria-hidden></img>
-        <h3>We use cookies</h3>
-        <p>
-          Cookies help us deliver the best experience on our website, By using
-          our website, you agree to the use of cookies. Learn more.
-        </p>
-        <Button onClick={() => acceptCookies()} isWide>
-          Accept all cookies
-        </Button>
-        <button
-          ofType="primaryOutline"
-          onClick={() => rejectCokies()}
-          className={styles.rejectBtn}
+  return (
+    <>
+      {cookieExists === false && (
+        <div
+          className={styles.container}
+          style={{
+            opacity: isVisible,
+          }}
         >
-          Use only necessary cookies
-        </button>
-      </div>
-    );
-  } else {
-    return null;
-  }
+          <img src={cookie} alt="" aria-hidden></img>
+          <h3>We use cookies</h3>
+          <p>
+            Cookies help us deliver the best experience on our website, By using
+            our website, you agree to the use of cookies. Learn more.
+          </p>
+          <Button onClick={() => acceptCookies()} isWide>
+            Accept all cookies
+          </Button>
+          <button
+            ofType="primaryOutline"
+            onClick={() => rejectCokies()}
+            className={styles.rejectBtn}
+          >
+            Use only necessary cookies
+          </button>
+        </div>
+      )}
+    </>
+  );
 };
 
 export default CookieNotice;
