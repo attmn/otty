@@ -22,7 +22,7 @@ const ContactForm = (props) => {
       </Button>
       <Modal
         isOpen={modalIsOpen}
-        onRequestClose={() => setIsOpen(props.setIsOpen(false))}
+        onRequestClose={() => setIsOpen(false)}
         className={styles.modalContainer}
         overlayClassName={styles.modalOverlay}
         contentLabel="Modal Menu"
