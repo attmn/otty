@@ -31,8 +31,8 @@ const rejectCokies = () => {
   document.cookie = "acceptCookies=true; SameSite=None; Secure";
 };
 
-let gaProperty = "G-7MVZD0BJZG",
-  disableStr = "ga-disable-" + gaProperty;
+let gaProperty = "G-7MVZD0BJZG";
+const disableStr = "ga-disable-" + gaProperty;
 
 const CookieNotice = () => {
   if (checkACookieExists() === undefined) {
