@@ -2,7 +2,7 @@ import React from "react";
 import Button from "./Button";
 import * as styles from "./CookieNotice.module.sass";
 import cookie from "../img/cookie.svg";
-import { window, document } from "browser-monads";
+import { document } from "browser-monads";
 
 function checkACookieExists() {
   if (
@@ -24,7 +24,6 @@ function removeItem(sKey, sPath, sDomain) {
 
 function acceptCookies() {
   document.cookie = "acceptCookies=true; SameSite=None; Secure";
-  removeItem(disableStr);
 }
 
 const rejectCokies = () => {
@@ -36,27 +35,27 @@ const disableStr = "ga-disable-" + gaProperty;
 
 const CookieNotice = () => {
   if (checkACookieExists() === undefined) {
-    document.cookie =
-      disableStr + "=true; expires=Thu, 31 Dec 2099 23:59:59 UTC;path=/";
     return (
-      <div className={styles.container}>
-        <img src={cookie} alt="" aria-hidden></img>
-        <h3>We use cookies</h3>
-        <p>
-          Cookies help us deliver the best experience on our website, By using
-          our website, you agree to the use of cookies. Learn more.
-        </p>
-        <Button onClick={() => acceptCookies()} isWide>
-          Accept all cookies
-        </Button>
-        <button
-          ofType="primaryOutline"
-          onClick={() => rejectCokies()}
-          className={styles.rejectBtn}
-        >
-          Use only necessary cookies
-        </button>
-      </div>
+      <>
+        <div className={styles.container}>
+          <img src={cookie} alt="" aria-hidden></img>
+          <h3>We use cookies</h3>
+          <p>
+            Cookies help us deliver the best experience on our website, By using
+            our website, you agree to the use of cookies. Learn more.
+          </p>
+          <Button onClick={() => acceptCookies()} isWide>
+            Accept all cookies
+          </Button>
+          <button
+            ofType="primaryOutline"
+            onClick={() => rejectCokies()}
+            className={styles.rejectBtn}
+          >
+            Use only necessary cookies
+          </button>
+        </div>
+      </>
     );
   } else {
     return null;
