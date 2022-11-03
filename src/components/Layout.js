@@ -4,10 +4,10 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import ScrollUp from "../components/ScrollUp";
 import "../styles/all.sass";
-import * as styles from "./Layout.module.sass";
 import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
 import Wave from "./Wave";
+import CookieNotice from "./CookieNotice";
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
@@ -53,6 +53,7 @@ const TemplateWrapper = ({ children }) => {
       </Helmet>
       <Navbar />
       <ScrollUp />
+      <CookieNotice />
       <div>{children}</div>
       <Wave type="top" />
       <Footer />

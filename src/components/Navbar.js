@@ -56,9 +56,6 @@ const Navbar = () => {
                     <Link className={styles.menuItem} to="/#examples">
                       Examples
                     </Link>
-                    <Link className={styles.menuItem} to="/#eco">
-                      Eco-friendly
-                    </Link>
                     <Link className={styles.menuItem} to="/blog">
                       Blog
                     </Link>
@@ -132,14 +129,6 @@ const ModalMenu = (props) => {
           onClick={() => props.setIsOpen(false)}
         >
           Examples
-        </Link>
-
-        <Link
-          className={styles.menuItem}
-          to="/#eco"
-          onClick={() => props.setIsOpen(false)}
-        >
-          Eco-friendly
         </Link>
 
         <Link
