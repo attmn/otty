@@ -31,12 +31,8 @@ const rejectCokies = () => {
   document.cookie = "acceptCookies=true; SameSite=None; Secure";
 };
 
-if (typeof window !== undefined) {
-  let gaProperty = "G-7MVZD0BJZG",
-    disableStr = "ga-disable-" + gaProperty;
-  document.cookie.indexOf(disableStr + "=true") > -1 &&
-    (window[disableStr] = !0);
-}
+let gaProperty = "G-7MVZD0BJZG",
+  disableStr = "ga-disable-" + gaProperty;
 
 const CookieNotice = () => {
   if (checkACookieExists() === undefined) {
