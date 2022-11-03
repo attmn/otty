@@ -2,6 +2,7 @@ import React from "react";
 import Button from "./Button";
 import * as styles from "./CookieNotice.module.sass";
 import cookie from "../img/cookie.svg";
+import { document } from ‘browser-monads’;
 
 function checkACookieExists() {
   if (
