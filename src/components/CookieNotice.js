@@ -22,9 +22,9 @@ function removeItem(sKey, sPath, sDomain) {
     (sPath ? "; path=" + sPath : "");
 }
 
-function acceptCookies() {
+const acceptCookies = () => {
   document.cookie = "acceptCookies=true; SameSite=None; Secure";
-}
+};
 
 const rejectCokies = () => {
   document.cookie = "acceptCookies=true; SameSite=None; Secure";
@@ -34,32 +34,26 @@ let gaProperty = "G-7MVZD0BJZG";
 const disableStr = "ga-disable-" + gaProperty;
 
 const CookieNotice = () => {
-  if (checkACookieExists() === undefined) {
-    return (
-      <>
-        <div className={styles.container}>
-          <img src={cookie} alt="" aria-hidden></img>
-          <h3>We use cookies</h3>
-          <p>
-            Cookies help us deliver the best experience on our website, By using
-            our website, you agree to the use of cookies. Learn more.
-          </p>
-          <Button onClick={() => acceptCookies()} isWide>
-            Accept all cookies
-          </Button>
-          <button
-            ofType="primaryOutline"
-            onClick={() => rejectCokies()}
-            className={styles.rejectBtn}
-          >
-            Use only necessary cookies
-          </button>
-        </div>
-      </>
-    );
-  } else {
-    return null;
-  }
+  return (
+    <div className={styles.container}>
+      <img src={cookie} alt="" aria-hidden></img>
+      <h3>We use cookies</h3>
+      <p>
+        Cookies help us deliver the best experience on our website, By using our
+        website, you agree to the use of cookies. Learn more.
+      </p>
+      <Button onClick={() => acceptCookies()} isWide>
+        Accept all cookies
+      </Button>
+      <button
+        ofType="primaryOutline"
+        onClick={() => rejectCokies()}
+        className={styles.rejectBtn}
+      >
+        Use only necessary cookies
+      </button>
+    </div>
+  );
 };
 
 export default CookieNotice;
