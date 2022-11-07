@@ -12,8 +12,6 @@ const Medusa = (props) => {
     case "1":
       return (
         <svg
-          width="204"
-          height="244"
           viewBox="0 0 204 244"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -26,8 +24,6 @@ const Medusa = (props) => {
     case "2":
       return (
         <svg
-          width="210"
-          height="362"
           viewBox="0 0 210 362"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"

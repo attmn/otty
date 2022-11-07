@@ -34,6 +34,10 @@ const HowToUseSection = () => {
         <Seaweed number="1" />
         <Fish number="group2" />
         <Seaweed number="2" />
+        <Fish number="group4" />
+        <Circle number="2" />
+        <Circle number="1" />
+        <Circle number="2" />
       </div>
       <div className={styles.sectionContainer}>
         <h2>Where and how to use Otty</h2>

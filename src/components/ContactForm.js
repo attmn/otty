@@ -104,19 +104,22 @@ const Message = (props) => {
       ) : formStatus === "Error" ? (
         <div>
           <p>
-            Error! The contact form has failed to send. Please try again or
-            contact us using another way.
+            Something went wrong... And form has failed to send. Please try
+            again or contact us using another way.
           </p>
           <br />
           <div id={styles.contactGridEmail}>
-            <span className={styles.contactGridTitle}>EMAIL</span>
-            <br />
+            <span className={styles.contactGridTitle}>E-mail:</span>
             <a href="mailto:info@leadmagnet.uk">
-              <p>info@leadmagnet.uk</p>
+              <p>info@ottycleaner.co.uk</p>
             </a>
           </div>
           <br />
-          <Button type="submit" onClick={() => setFormStatus("")}>
+          <Button
+            ofType="whiteOutline"
+            type="submit"
+            onClick={() => setFormStatus("")}
+          >
             TRY AGAIN
           </Button>
         </div>
