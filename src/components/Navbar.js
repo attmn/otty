@@ -39,6 +39,11 @@ const Navbar = () => {
                       modalIsOpen && styles.burgerMenuActive
                     }`}
                     aria-expanded={modalIsOpen}
+                    aria-label={
+                      modalIsOpen
+                        ? "Open Navigation Menu"
+                        : "Close Navigation Menu"
+                    }
                     onClick={() => setIsOpen(!modalIsOpen)}
                   >
                     <div />

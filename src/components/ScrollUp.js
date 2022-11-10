@@ -3,7 +3,11 @@ import * as styles from "./ScrollUp.module.sass";
 
 const ScrollUp = () => {
   return (
-    <button className={styles.container} onClick={() => window.scrollTo(0, 0)}>
+    <button
+      className={styles.container}
+      onClick={() => window.scrollTo(0, 0)}
+      aria-hidden
+    >
       <svg
         width="64"
         height="64"
