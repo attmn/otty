@@ -326,7 +326,12 @@ export default class CookiesPolicyPage extends React.Component {
                 countries that have been deemed to provide an adequate level of
                 protection for personal data. More information can be found
                 here:{" "}
-                <a href="https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/international-transfers-after-uk-exit/">
+                <a
+                  href="https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/international-transfers-after-uk-exit/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  aria-label="ICO Internation transfers after UK exit"
+                >
                   https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/international-transfers-after-uk-exit/.
                 </a>
                 <br />
@@ -334,7 +339,12 @@ export default class CookiesPolicyPage extends React.Component {
                 Otherwise, we may use specific contractual clauses approved for
                 use in the UK which give personal data the same protection as it
                 has in in the UK. More information about this is available here:{" "}
-                <a href="https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/international-transfers-after-uk-exit/sccs-after-transition-period/">
+                <a
+                  href="https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/international-transfers-after-uk-exit/sccs-after-transition-period/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  aria-label="ICO SCCS After transition period"
+                >
                   https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/international-transfers-after-uk-exit/sccs-after-transition-period/.
                 </a>
                 <br />

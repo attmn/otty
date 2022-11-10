@@ -22,7 +22,12 @@ const Footer = () => {
           />
         </div>
         <div className={styles.socialContainer}>
-          <Link to="https://instagram.com/otty.cleaner">
+          <a
+            href="https://instagram.com/otty.cleaner"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="Otty on Instagram"
+          >
             <svg
               width="64"
               height="65"
@@ -49,8 +54,13 @@ const Footer = () => {
                 </clipPath>
               </defs>
             </svg>
-          </Link>
-          <Link to="https://www.tiktok.com/@otty.cleaner">
+          </a>
+          <a
+            href="https://www.tiktok.com/@otty.cleaner"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="Otty on TikTok"
+          >
             <svg
               width="64"
               height="65"
@@ -65,8 +75,13 @@ const Footer = () => {
                 fill="#59C3AC"
               />
             </svg>
-          </Link>
-          <Link to="https://facebook.com/otty.cleaner">
+          </a>
+          <a
+            href="https://facebook.com/otty.cleaner"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="Otty on Facebook"
+          >
             <svg
               width="64"
               height="65"
@@ -93,8 +108,13 @@ const Footer = () => {
                 </clipPath>
               </defs>
             </svg>
-          </Link>
-          <Link to="https://youtube.com/channel/UC_ccwZcMGHCWDA9NAVZeePw">
+          </a>
+          <a
+            href="https://youtube.com/channel/UC_ccwZcMGHCWDA9NAVZeePw"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="Otty on Youtube"
+          >
             <svg
               width="64"
               height="65"
@@ -121,15 +141,15 @@ const Footer = () => {
                 </clipPath>
               </defs>
             </svg>
-          </Link>
+          </a>
         </div>
         <div>
           <div className={styles.copyright}>
             Otty Cleaner © {year} All rights reserved.
           </div>
           <div className={styles.legal}>
-            <Link to="/terms-conditions">Terms & Conditions</Link>
-            <Link to="/cookies-policy">Cookies & Privacy</Link>
+            <Link href="/terms-conditions">Terms & Conditions</Link>
+            <Link href="/cookies-policy">Cookies & Privacy</Link>
           </div>
         </div>
       </div>

@@ -50,7 +50,14 @@ const CookieNotice = () => {
           <p>
             Cookies help us deliver the best experience on our website, By using
             our website, you agree to the use of cookies.{" "}
-            <Link to="/cookies-policy">Learn more</Link>
+            <Link
+              to="/cookies-policy"
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="Cookie & Privacy Policy"
+            >
+              Learn more
+            </Link>
           </p>
           <Button onClick={() => acceptCookies()} isWide>
             Accept all cookies
