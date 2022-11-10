@@ -16,8 +16,8 @@ exports.handler = async (event, context, callback) => {
   const msg = {
     to: SENDGRID_TO_EMAIL,
     replyTo: email,
-    from: "info@leadmagnet.uk",
-    subject: "LM Website: " + name + " " + tel,
+    from: "info@ottycleaner.uk",
+    subject: "Otty Website: " + name + " " + tel,
     html: body,
   };
 
