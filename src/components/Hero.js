@@ -8,7 +8,6 @@ import * as marqueeStyles from "./Marquee.module.sass";
 import Button from "./Button";
 import MarqueeItem from "./MarqueeItem";
 
-import mockup from "../img/heroImg.png";
 import icon1 from "../img/icons/allergy.svg";
 import icon2 from "../img/icons/plant.svg";
 import icon3 from "../img/icons/child.svg";
@@ -18,6 +17,7 @@ import Circle from "./elements/Circle";
 import Medusa from "./elements/Medusa";
 import Fish from "./elements/Fish";
 import Seaweed from "./elements/Seaweed";
+import Image from "./ImageComponent";
 
 const Hero = () => {
   return (
@@ -50,7 +50,12 @@ const Hero = () => {
           </Link>
         </div>
         <div className={styles.imgContainer}>
-          <img src={mockup} alt="" aria-hidden className={styles.heroImg} />
+          <Image
+            fileName="heroImg.png"
+            alt=""
+            aria-hidden
+            className={styles.heroImg}
+          />
         </div>
       </div>
       <Media

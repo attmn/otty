@@ -43,7 +43,7 @@ const HowToUseSection = () => {
         <h2>Where and how to use Otty</h2>
         <div className={styles.blobContainer}>
           <div className={styles.blob1}>
-            <img src={icon1} alt="" aria-hidden />
+            <img src={icon1} alt="" aria-hidden loading="lazy" />
             <h3>Whitening and stain removal</h3>
             <p>
               Dissolve 1/4 to 1 scoop (depending on stain) of Otty per 1L of hot
@@ -55,7 +55,7 @@ const HowToUseSection = () => {
             </p>
           </div>
           <div className={styles.blob2}>
-            <img src={icon1} alt="" aria-hidden />
+            <img src={icon1} alt="" aria-hidden loading="lazy" />
             <h3>Removing tougher stains</h3>
             <p>
               To remove tougher stains mix equal amounts of Otty and hot water.
@@ -68,7 +68,7 @@ const HowToUseSection = () => {
         <div className={styles.blobContainer}>
           <div className={styles.blobContainer2}>
             <div className={styles.blob3}>
-              <img src={icon2} alt="" aria-hidden />
+              <img src={icon2} alt="" aria-hidden loading="lazy" />
               <h3>
                 Hand & machine wash <br />
                 <span>(30°с - 90°с)</span>
@@ -81,7 +81,7 @@ const HowToUseSection = () => {
               </p>
             </div>
             <div className={styles.blob4}>
-              <img src={icon3} alt="" aria-hidden />
+              <img src={icon3} alt="" aria-hidden loading="lazy" />
               <h3>Cleaning surfaces</h3>
               <p>
                 Mix with a small amount of water until you get a paste. Apply
@@ -91,7 +91,7 @@ const HowToUseSection = () => {
             </div>
           </div>
           <div className={styles.blob5}>
-            <img src={icon1} alt="" aria-hidden />
+            <img src={icon1} alt="" aria-hidden loading="lazy" />
             <h3>Cleaning kitchen and tableware</h3>
             <p>
               Effectively removes even the thickest layer of fat, scale buildup
