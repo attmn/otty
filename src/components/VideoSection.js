@@ -27,17 +27,17 @@ const VideoSection = () => {
         >
           {(matches) => (
             <Fragment>
-              {matches.small ? (
+              {!matches.small ? (
                 <div className={styles.btnContainer}>
                   <Link to="https://www.tiktok.com/@otty.cleaner">
                     <Button
                       ofType="primary"
+                      ofSize="large"
                       style={{
                         display: "flex",
                         justifyContent: "center",
                         gap: "0.8rem",
                       }}
-                      isWide
                     >
                       See more on <TikTok />
                       TikTok
@@ -46,12 +46,12 @@ const VideoSection = () => {
                   <Link to="https://instagram.com/otty.cleaner">
                     <Button
                       ofType="primaryOutline"
+                      ofSize="large"
                       style={{
                         display: "flex",
                         justifyContent: "center",
                         gap: "0.8rem",
                       }}
-                      isWide
                     >
                       See more on <Instagram /> Instagram
                     </Button>
@@ -62,12 +62,12 @@ const VideoSection = () => {
                   <Link to="https://www.tiktok.com/@otty.cleaner">
                     <Button
                       ofType="primary"
-                      ofSize="large"
                       style={{
                         display: "flex",
                         justifyContent: "center",
                         gap: "0.8rem",
                       }}
+                      isWide
                     >
                       See more on <TikTok />
                       TikTok
@@ -76,12 +76,12 @@ const VideoSection = () => {
                   <Link to="https://instagram.com/otty.cleaner">
                     <Button
                       ofType="primaryOutline"
-                      ofSize="large"
                       style={{
                         display: "flex",
                         justifyContent: "center",
                         gap: "0.8rem",
                       }}
+                      isWide
                     >
                       See more on <Instagram /> Instagram
                     </Button>
