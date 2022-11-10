@@ -3,16 +3,16 @@ import React from "react";
 import * as styles from "./BuySection.module.sass";
 import Button from "./Button";
 
-import mockup from "../img/buyImg.png";
 import ContactForm from "./ContactForm";
+import Image from "./ImageComponent";
 
 const BuySection = () => {
   return (
     <div className={styles.container} id="buy">
       <div className={styles.sectionContainer}>
         <div className={styles.imgContainer}>
-          <img
-            src={mockup}
+          <Image
+            fileName="buyImg.png"
             alt="Otty packaging"
             className={styles.packageImg}
           />

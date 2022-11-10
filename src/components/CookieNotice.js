@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import Button from "./Button";
 import * as styles from "./CookieNotice.module.sass";
-import cookie from "../img/cookie.svg";
 import { document } from "browser-monads";
 import { Link } from "gatsby";
+
+import cookie from "../img/cookie.svg";
 
 const CookieNotice = () => {
   const [cookieExists, setCookieExists] = useState(
