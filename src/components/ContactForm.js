@@ -82,11 +82,7 @@ const Message = (props) => {
       setFormStatus("Success");
       typeof window !== "undefined" &&
         window.gtag("event", "contact-page-submit", {
-          send_to: ["UA-208853161-1"],
-        });
-      typeof window !== "undefined" &&
-        window.gtag("event", "contact-page-submit", {
-          send_to: ["G-PQT5W23MR1"],
+          send_to: ["G-7MVZD0BJZG"],
         });
     } catch (e) {
       //error
