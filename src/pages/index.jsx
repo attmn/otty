@@ -18,7 +18,7 @@ const IndexPage = () => {
   return(
   <Layout 
   title={`Otty | All Purpose Oxygen Stain Remover & Household Cleaning Powder`} 
-  description="Eco-friendly stain remover and all purpose cleaner. Whitens, removes stains from coloured, white and dark fabrics. Clean any surface, item or clothing. Oxygen-based, water-activated formula. Chlorine and chemical free.">
+  description={`Eco-friendly stain remover and all purpose cleaner. Whitens, removes stains from coloured, white and dark fabrics. Clean any surface, item or clothing. Oxygen-based, water-activated formula. Chlorine and chemical free.`}>
     <section >
       <div>
             <Hero />
