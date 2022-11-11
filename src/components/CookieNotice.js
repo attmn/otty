@@ -15,6 +15,7 @@ const CookieNotice = () => {
       : false
   );
   const [isVisible, setIsVisible] = useState("");
+  const [isDisplayed, setIsDisplayed] = useState("none");
 
   const acceptCookies = () => {
     document.cookie =
@@ -25,9 +26,15 @@ const CookieNotice = () => {
   let gaProperty = "G-7MVZD0BJZG";
   const disableStr = "ga-disable-" + gaProperty;
 
-  setTimeout(() => {
-    setIsVisible("1");
-  }, 2000);
+  if (cookieExists === false) {
+    setTimeout(() => {
+      setIsDisplayed("block");
+    }, 1900);
+
+    setTimeout(() => {
+      setIsVisible("1");
+    }, 2000);
+  }
 
   const rejectCokies = () => {
     document.cookie =
@@ -43,6 +50,7 @@ const CookieNotice = () => {
         <div
           style={{
             opacity: isVisible,
+            display: isDisplayed,
           }}
           className={styles.container}
         >
