@@ -12,6 +12,7 @@ const PreviewCompatibleImage = ({ imageInfo }) => {
       <GatsbyImage
         image={image.childImageSharp.gatsbyImageData}
         style={imageStyle}
+        loading="eager"
         alt={alt}
       />
     );
@@ -20,6 +21,7 @@ const PreviewCompatibleImage = ({ imageInfo }) => {
       <GatsbyImage
         image={childImageSharp.gatsbyImageData}
         style={imageStyle}
+        loading="eager"
         alt={alt}
       />
     );

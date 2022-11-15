@@ -48,10 +48,10 @@ const CompareSection = () => {
           <div className={styles.row}>
             <div className={styles.altCell}>
               To produce the ingredients for these products, heavy industry is
-              required which produces high emissions
+              required which has a high environmental impact
             </div>
             <div className={styles.cell}>
-              Otty is made entirely of nautral sodium components.
+              Otty is made entirely of natural sodium components
             </div>
           </div>
           <div className={styles.row}>
@@ -62,7 +62,7 @@ const CompareSection = () => {
             <div className={styles.cell}>
               Otty contains 0% fragrance, perfumes, enzymes, parabens &
               colouring. This means it's hypoallergenic and safe for children's
-              clothes
+              clothing
             </div>
           </div>
         </div>

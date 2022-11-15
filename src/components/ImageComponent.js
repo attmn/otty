@@ -7,10 +7,10 @@ const Image = ({ fileName, alt, imgClass, ...props }) => {
     query {
       allImageSharp {
         nodes {
-          fluid(maxWidth: 1206, quality: 100) {
+          fluid {
             originalName
           }
-          gatsbyImageData
+          gatsbyImageData(width: 1206, quality: 100, placeholder: BLURRED)
         }
       }
     }
@@ -24,7 +24,7 @@ const Image = ({ fileName, alt, imgClass, ...props }) => {
     <GatsbyImage
       image={image}
       alt={alt}
-      className={imgClass}
+      imgClassName={imgClass}
       loading="eager"
       imgStyle={{ objectFit: "contain" }}
       {...props}

@@ -50,8 +50,8 @@ const HowToUseSection = () => {
               water and soak for 15-60min. Suitable for white, black and
               coloured fabrics. Not suitable for wool, leather, or silk items.{" "}
               <br />
-              <b>For Whites:</b> up to 6h. <br />
-              <b>For Colours:</b> up to 1h.
+              <b>For Whites:</b> up to 6h <br />
+              <b>For Colours:</b> up to 1h
             </p>
           </div>
           <div className={styles.blob2}>
@@ -61,7 +61,7 @@ const HowToUseSection = () => {
               To remove tougher stains mix equal amounts of Otty and hot water.
               Apply equally to stain and leave for up to 1h (less if coloured).
               Then rinse or wash, and dry. Not suitable for wool, leather, or
-              silk items.
+              silk items
             </p>
           </div>
         </div>
@@ -86,7 +86,7 @@ const HowToUseSection = () => {
               <p>
                 Mix with a small amount of water until you get a paste. Apply
                 paste to stain and leave for 15-30min. Rinse with clean water
-                and dry. After that, wipe with a dry clean cloth.
+                and dry. After that, wipe with a dry clean cloth
               </p>
             </div>
           </div>
@@ -99,7 +99,7 @@ const HowToUseSection = () => {
               effectively cleans any kitchenware. Fill the item with hot water
               up to the desired level of cleaning or place the item inside a
               container of hot water. Add 1/2 to 2 scoops of Otty per 1L. Leave
-              for 15-30mins. Wash and rinse thoroughly before using.
+              for 15-30mins. Wash and rinse thoroughly before using
             </p>
           </div>
         </div>

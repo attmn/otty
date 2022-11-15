@@ -61,6 +61,7 @@ const BlogItem = ({ post }) => {
                   height:
                     post.frontmatter.featuredimage.childImageSharp
                       .gatsbyImageData.height,
+                  placeholder: "BLURRED",
                 }}
               />
             </div>
