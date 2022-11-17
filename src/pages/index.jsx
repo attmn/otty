@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-import { Helmet } from "react-helmet";
 import Media from "react-media";
 import Layout from "../components/Layout";
 import BlogRoll from "../components/BlogRoll"
@@ -11,6 +10,9 @@ import CompareSection from "../components/CompareSection";
 import Wave from "../components/Wave";
 import BuySection from "../components/BuySection";
 import FaqSection from "../components/FaqSection";
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+
 
 
 const IndexPage = () => {

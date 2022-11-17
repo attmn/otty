@@ -1,7 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: "Otty | Oxygen based eco-cleaner",
-    description: "",
+    title:
+      "Otty | All purpose oxygen stain remover & household cleaning powder",
+    description:
+      "Eco-friendly stain remover and all purpose cleaner. Whitens, removes stains from coloured, white and dark fabrics. Clean any surface, item or clothing. Oxygen-based, water-activated formula. Chlorine and chemical free",
   },
   plugins: [
     "gatsby-plugin-react-helmet",
