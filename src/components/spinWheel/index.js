@@ -71,6 +71,8 @@ const SpinWheel = () => {
 };
 
 const Wheel2 = () => {
+  const [result, setResult] = useState("");
+
   const segments = [
     "20% OFF Your next order",
     "Free pack of Otty",
@@ -100,11 +102,12 @@ const Wheel2 = () => {
     "#4BB7A6",
   ];
   const onFinished = (winner) => {
-    console.log(winner);
+    setResult(winner);
   };
 
   return (
     <div>
+      <h3>You have won: {result}</h3>
       <WheelComponent
         segments={segments}
         segColors={segColors}
