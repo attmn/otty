@@ -5,7 +5,7 @@ import classNames from "classnames";
 const Button = ({
   children,
   ofType = "primary",
-  ofSize,
+  ofSize = "",
   isDisabled,
   isWide,
   ...props

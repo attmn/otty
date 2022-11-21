@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Button from "../Button";
 import * as styles from "./index.module.sass";
 
 const WheelComponent = ({
@@ -16,8 +17,8 @@ const WheelComponent = ({
   fontFamily = "proxima-nova",
 }) => {
   let currentSegment = "";
-  let isStarted = false;
   const [isFinished, setFinished] = useState(false);
+  const [isStarted, setIsStarted] = useState(false);
   let timerHandle = 0;
   const timerDelay = segments.length;
   let angleCurrent = 0;
@@ -54,7 +55,7 @@ const WheelComponent = ({
   };
 
   const spin = () => {
-    isStarted = true;
+    setIsStarted(true);
     if (timerHandle === 0) {
       spinStart = new Date().getTime();
       // maxSpeed = Math.PI / ((segments.length*2) + Math.random())
@@ -189,14 +190,22 @@ const WheelComponent = ({
   };
 
   return (
-    <div>
-      <button
-        onClick={() => {
-          spin();
-        }}
-      >
-        Try your luck
-      </button>
+    <>
+      {!isFinished && (
+        <div>
+          {!isStarted && (
+            <Button
+              onClick={() => {
+                spin();
+              }}
+              ofType="secondary"
+              ofSize="large"
+            >
+              Spin the wheel!
+            </Button>
+          )}
+        </div>
+      )}
       <div className={styles.wheel}>
         <canvas
           id="canvas"
@@ -206,9 +215,20 @@ const WheelComponent = ({
             transform: "rotate(90deg)",
           }}
         />
-        <div className={styles.needle} />
+        <svg
+          className={styles.needle}
+          height="20"
+          viewBox="0 0 40 21"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M33.711 0.791904C33.0556 0.511786 32.3642 0.296465 31.6469 0.161549C30.5214 -0.0501709 29.3749 0.196737 28.2963 0.581631L0.5 10.5L28.2963 20.4184C29.3749 20.8033 30.5214 21.0502 31.6469 20.8385C32.3642 20.7035 33.0556 20.4882 33.711 20.2081C34.9631 19.6508 36.073 18.8883 37.012 17.9204C37.9511 16.9525 38.7194 15.8087 39.2317 14.5182C39.7154 13.2863 40 11.9371 40 10.5C40 9.09217 39.7439 7.71369 39.2317 6.48185C38.7194 5.19134 37.9511 4.04749 37.012 3.07961C36.073 2.11173 34.9631 1.31984 33.711 0.791904Z"
+            fill="#F9E76B"
+          />
+        </svg>
       </div>
-    </div>
+    </>
   );
 };
 export default WheelComponent;

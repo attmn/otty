@@ -11,7 +11,6 @@ export default class PrizesPage extends React.Component {
       <Layout>
         <div className={styles.container}>
           <div className={styles.sectionContainer}>
-            <h1>Prizes</h1>
             <SpinWheel />
           </div>
         </div>
