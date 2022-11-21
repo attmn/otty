@@ -58,7 +58,7 @@ const SpinWheel = () => {
     <div className={styles.container}>
       {!showWheel ? (
         <>
-          <div>
+          <div className={styles.textContainer}>
             <h1>
               Spin the wheel <br /> to win prizes!
             </h1>
