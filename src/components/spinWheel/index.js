@@ -5,6 +5,8 @@ import React, { useState } from "react";
 import WheelComponent from "./wheelComponent";
 import * as styles from "./index.module.sass";
 import Button from "../Button";
+import classNames from "classnames";
+import Image from "../ImageComponent";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCJ8k5aQzCRxKkJmmhS3j6MLXB7b_TqhxY",
@@ -54,8 +56,14 @@ const SpinWheel = () => {
     event.preventDefault();
   };
 
+  const { containerShowWheel } = styles;
+
   return (
-    <div className={styles.container}>
+    <div
+      className={classNames(styles.container, {
+        [`${containerShowWheel}`]: showWheel === true,
+      })}
+    >
       {!showWheel ? (
         <>
           <div className={styles.textContainer}>
@@ -133,20 +141,148 @@ const Wheel2 = () => {
 
   return (
     <div className={styles.wheelContainer}>
-      {result !== "" && <div>{result}</div>}
+      {result !== "" && (
+        <div className={styles.resultContainer}>
+          {(() => {
+            switch (result) {
+              case "20% OFF Your next order":
+                return (
+                  <div>
+                    <div className={styles.resultHeading}>You've won!</div>
+                    <p>
+                      Use this Amazon voucher on your next purchase to get{" "}
+                      <strong>20% OFF</strong> your next order!
+                    </p>
+                    <VoucherContainer voucherCode="SHAV-SFEH-JGDT-SCFS" />
+                  </div>
+                );
+              case "50% OFF Your next order":
+                return (
+                  <>
+                    <div className={styles.resultHeading}>You've won!</div>
+                    <p>
+                      Use this Amazon voucher on your next purchase to get{" "}
+                      <strong>50% OFF</strong> your next order!
+                    </p>
+                    <VoucherContainer voucherCode="SHAV-SFEH-JGDT-SCFS" />
+                  </>
+                );
+              case "Free pack of Otty":
+                return (
+                  <>
+                    <Image
+                      fileName="singlePack.png"
+                      alt="Otty packaging"
+                      className={styles.packageImg}
+                      style={{ height: "252px" }}
+                    />
+                    <div>
+                      <div className={styles.resultHeading}>You've won!</div>
+                      <p>
+                        We will soon be in touch to send you a free pack of
+                        Otty!
+                      </p>
+                      <p className={styles.resultNote}>
+                        (We’ll use the email you entered earlier)
+                      </p>
+                    </div>
+                  </>
+                );
+              case "Otty triple pack":
+                return (
+                  <>
+                    <Image
+                      fileName="triplePack.png"
+                      alt="Otty packaging"
+                      className={styles.packageImg}
+                      style={{ height: "252px", marginBottom: "-2.4rem" }}
+                    />
+                    <div className={styles.resultHeading}>You've won!</div>
+                    <p>
+                      We will soon be in touch to send you a free triple pack of
+                      Otty!
+                    </p>
+                    <p className={styles.resultNote}>
+                      (We’ll use the email you entered earlier)
+                    </p>
+                  </>
+                );
+              case "6 Months subscription":
+                return (
+                  <>
+                    <Image
+                      fileName="triplePack.png"
+                      alt="Otty packaging"
+                      className={styles.packageImg}
+                      style={{ height: "252px" }}
+                    />
+                    <div className={styles.resultHeading}>You've won!</div>
+                    <p>
+                      We will soon be in touch to arrange a 6 months
+                      subscription to Otty!
+                    </p>
+                    <p className={styles.resultNote}>
+                      (We’ll use the email you entered earlier)
+                    </p>
+                  </>
+                );
+              case "Otty sticker pack":
+                return (
+                  <>
+                    <div className={styles.resultHeading}>You've won!</div>
+                    <p>
+                      We will soon be in touch to send you a free Otty sticker
+                      pack!
+                    </p>
+                    <p className={styles.resultNote}>
+                      (We’ll use the email you entered earlier)
+                    </p>
+                  </>
+                );
+              default:
+                return null;
+            }
+          })()}
+        </div>
+      )}
       <WheelComponent
         segments={segments}
         segColors={segColors}
         onFinished={(winner) => onFinished(winner)}
+        winningSegment="Otty triple pack"
         textColor="#FFFFFF"
         primaryColor="#F9E76A"
         contrastColor="#F9E76A"
-        isOnlyOnce={false}
+        isOnlyOnce={true}
         size={290}
         upDuration={200}
         downDuration={500}
         fontFamily="sans-serif"
       />
+    </div>
+  );
+};
+
+const VoucherContainer = ({ voucherCode }) => {
+  return (
+    <div className={styles.voucherContainer}>
+      {voucherCode}
+      <button
+        onClick={() => {
+          navigator.clipboard.writeText(voucherCode);
+        }}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill="#70CDB7"
+            d="M5 22q-.825 0-1.413-.587Q3 20.825 3 20V6h2v14h11v2Zm4-4q-.825 0-1.412-.587Q7 16.825 7 16V4q0-.825.588-1.413Q8.175 2 9 2h9q.825 0 1.413.587Q20 3.175 20 4v12q0 .825-.587 1.413Q18.825 18 18 18Zm0-2h9V4H9v12Zm0 0V4v12Z"
+          />
+        </svg>
+      </button>
     </div>
   );
 };

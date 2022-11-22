@@ -94,6 +94,7 @@ label[for="email"]
             outline: none
 
 .wheelImg
+    max-width: 30rem
     width: 80%
     height: 100%
     order: 1
@@ -124,19 +125,85 @@ label[for="email"]
     display: flex
     justify-content: center
 
+.resultContainer
+    margin: 0 1.6rem 3.2rem 1.6rem
+    max-width: 40rem
+    display: flex
+    flex-direction: column
+    text-align: center
+
+    .resultHeading
+        font-weight: 700
+        font-size: 3.2rem
+
+    .resultNote
+        font-weight: 400
+        color: tokens.$neutral-text-light
+
+.voucherContainer
+    padding: 1.2rem
+    border-radius: 0.5rem
+    background: tokens.$primary700
+    color: tokens.$white
+    font-size: 1.6rem
+    font-weight: 600
+
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    button
+        display: flex
+        align-items: center
+        border: none
+        background: none
+        width: 2.8rem
+        cursor: pointer
+
+        &:hover svg
+            path
+                fill: tokens.$primary80
+
 @media screen and (min-width: 768px)
+    .container
+        flex-direction: unset
+        padding: unset
+        max-width: 1206px
+        gap: 1.2rem
+        width: 100%
+        justify-content: space-between
+
+        align-items: center
+
+    .containerShowWheel
+        justify-content: center
+
+    .wheelContainer
+        display: flex
+        flex-direction: column
+        align-items: center
+        width: unset
+        margin: 3.2rem 0
+
+    .wheel
+        left: 50%
+
+    .needle
+        position: absolute
+        right: -4.8rem
+
+    .textContainer
+        padding: 6.4rem 0 6.4rem 6.4rem
+        order: unset
+
+    .wheel
+        position: unset
+        transform: unset
+        left: unset
 
 @media screen and (min-width: 1024px)
     .container
-        padding: 6.4rem 0 6.4rem 9.6rem
-        max-height: 70rem
-        max-width: 1206px
         gap: 6.4rem
-        width: 100%
-
-        flex-direction: unset
-        align-items: center
-        justify-content: space-between
 
         h1
             font-size: 4.5rem
@@ -159,33 +226,52 @@ label[for="email"]
         input[type="email"]
             font-size: 1.6rem
 
+    .textContainer
+        padding: 6.4rem 0 6.4rem 9.6rem
+
     .wheelImg
+        max-width: unset
         width: unset
         order: unset
         margin-bottom: unset
 
-    .textContainer
-        order: unset
-        padding: unset
-
-    .wheelContainer
-        display: flex
-        align-items: center
-        justify-content: space-between
-        margin: 5rem 9.6rem 5rem 0
-
-    .wheel
-        position: unset
-        transform: unset
-
 @media screen and (min-width: 1330px)
     .container
-        padding: 0 0 0 9.6rem
+        max-height: 70rem
 
         h1
             font-size: 4.8rem
+
+    .textContainer
+        padding: 0 0 0 9.6rem
+
+    .wheelContainer
+        flex-direction: unset
+
+        gap: 4.8rem
+        margin: 5rem 0
+
+    .wheelDiv
+        order: 2
+
+    .needle
+        position: unset
+        left: unset
+
+    .resultContainer
+        width: 35rem
+
+        .resultHeading
+            font-weight: 700
+            font-size: 4.8rem
+
+        p
+            font-size: 1.6rem
 
 @media screen and (min-width: 1820px)
     .container
         h1
             font-size: 6.4rem
+
+    .wheelContainer
+        gap: 9.6rem
