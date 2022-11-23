@@ -7,6 +7,7 @@ const WheelComponent = ({
   segColors,
   winningSegment,
   onFinished,
+  isWheelFinished = false,
   textColor = "#ffffff",
   primaryColor = "black",
   contrastColor = "white",
@@ -17,7 +18,7 @@ const WheelComponent = ({
   fontFamily = "proxima-nova",
 }) => {
   let currentSegment = "";
-  const [isFinished, setFinished] = useState(false);
+  const [isFinished, setFinished] = useState(isWheelFinished);
   const [isStarted, setIsStarted] = useState(false);
   let timerHandle = 0;
   const timerDelay = segments.length;

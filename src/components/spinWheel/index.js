@@ -1,5 +1,12 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, addDoc, getDocs } from "firebase/firestore";
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  getDocs,
+  setDoc,
+  doc,
+} from "firebase/firestore";
 import React, { useState } from "react";
 
 import WheelComponent from "./wheelComponent";
@@ -31,34 +38,51 @@ const readData = async () => {
   });
 };
 
-const addData = async (value) => {
-  try {
-    const docRef = await addDoc(collection(db, "users"), {
-      email: value,
-    });
-    console.log("Document written with ID: ", docRef.id);
-  } catch (e) {
-    console.error("Error adding document: ", e);
-  }
+const addUserData = async (email, result = "") => {
+  await setDoc(doc(db, "users", email), {
+    email: email,
+    result: result,
+  });
 };
 
 const SpinWheel = () => {
   const [inputValue, setInputValue] = useState({ value: "" });
   const [showWheel, setShowWheel] = useState(false);
   const [hasPlayed, setHasPlayed] = useState(false);
+  const [userResult, setUserResult] = useState("");
+  const [spinWheelCookie, setSpinWheelCookie] = useState(
+    document.cookie
+      .split(";")
+      .some((item) => item.trim().startsWith("wheelSpin="))
+      ? true
+      : false
+  );
+
+  const setCookies = () => {
+    document.cookie =
+      "wheelSpin=true; SameSite=None; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/";
+    setSpinWheelCookie(true);
+  };
 
   const checkEmail = async (email) => {
     const querySnapshot = await getDocs(collection(db, "users"));
     let userEmail = "";
+    let userResult = {};
 
+    //Get user data
     querySnapshot.forEach((doc) => {
-      userEmail = doc.data().email;
+      if (doc.id === email) {
+        userEmail = doc.id;
+        userResult = doc.data().result;
+      }
     });
 
     if (userEmail === email) {
+      setUserResult(userResult);
       setHasPlayed(true);
+      setCookies();
     } else {
-      addData(userEmail);
+      addUserData(email, "");
       setShowWheel(true);
     }
   };
@@ -82,7 +106,7 @@ const SpinWheel = () => {
     >
       {!showWheel ? (
         <>
-          {!hasPlayed ? (
+          {spinWheelCookie !== true ? (
             <div className={styles.textContainer}>
               <h1>
                 Spin the wheel <br /> to win prizes!
@@ -114,20 +138,31 @@ const SpinWheel = () => {
             </div>
           ) : (
             <div className={styles.textContainer}>
-              <h1>You've already played</h1>
+              {!hasPlayed ? (
+                <h1>Thanks for playing!</h1>
+              ) : (
+                <h1>You've already played</h1>
+              )}
+              <p>We will soon be in touch with your prize details! </p>
+              <p className={styles.resultNote}>(If we haven't already)</p>
             </div>
           )}
           <WheelImg />
         </>
       ) : (
-        <Wheel2 />
+        <Wheel2
+          addUserData={addUserData}
+          userEmail={inputValue.value}
+          userResult={userResult}
+          setCookies={setCookies}
+        />
       )}
     </div>
   );
 };
 
-const Wheel2 = () => {
-  const [result, setResult] = useState("");
+const Wheel2 = ({ addUserData, userEmail, userResult, setCookies }) => {
+  const [result, setResult] = useState(userResult);
 
   const segments = [
     "20% OFF Your next order",
@@ -159,6 +194,8 @@ const Wheel2 = () => {
   ];
   const onFinished = (winner) => {
     setResult(winner);
+    addUserData(userEmail, winner);
+    setCookies();
   };
 
   return (
@@ -271,7 +308,6 @@ const Wheel2 = () => {
         segments={segments}
         segColors={segColors}
         onFinished={(winner) => onFinished(winner)}
-        winningSegment="Otty triple pack"
         textColor="#FFFFFF"
         primaryColor="#F9E76A"
         contrastColor="#F9E76A"
