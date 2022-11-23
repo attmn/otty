@@ -25,9 +25,9 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 const readData = async () => {
-  const querySnapshot = await getDocs(collection(db, "users"));
+  const querySnapshot = await getDocs(collection(db, "amazonVouchers1"));
   querySnapshot.forEach((doc) => {
-    console.log(`${doc.id} => ${doc.data()}`);
+    console.log(`${doc.id} => ${doc.data().value}`);
   });
 };
 
@@ -45,14 +45,30 @@ const addData = async (value) => {
 const SpinWheel = () => {
   const [inputValue, setInputValue] = useState({ value: "" });
   const [showWheel, setShowWheel] = useState(false);
+  const [hasPlayed, setHasPlayed] = useState(false);
+
+  const checkEmail = async (email) => {
+    const querySnapshot = await getDocs(collection(db, "users"));
+    let userEmail = "";
+
+    querySnapshot.forEach((doc) => {
+      userEmail = doc.data().email;
+    });
+
+    if (userEmail === email) {
+      setHasPlayed(true);
+    } else {
+      addData(userEmail);
+      setShowWheel(true);
+    }
+  };
 
   const handleChange = (event) => {
     setInputValue({ value: event.target.value });
   };
 
   const handleSubmit = (event) => {
-    addData(inputValue.value);
-    setShowWheel(true);
+    checkEmail(inputValue.value);
     event.preventDefault();
   };
 
@@ -66,35 +82,41 @@ const SpinWheel = () => {
     >
       {!showWheel ? (
         <>
-          <div className={styles.textContainer}>
-            <h1>
-              Spin the wheel <br /> to win prizes!
-            </h1>
-            <form onSubmit={(e) => handleSubmit(e)}>
-              <label for="email">
-                Enter your email address
-                <div className={styles.emailInput}>
-                  <EmailIcon />
-                  <input
-                    type="email"
-                    id="email"
-                    value={inputValue.value}
-                    onChange={(e) => handleChange(e)}
-                    required
-                  />
-                </div>
-              </label>
-              <label for="terms">
-                <input type="checkbox" id="terms" required />
-                <span className={styles.checkbox} />I agree with{" "}
-                <strong>Terms & Conditions</strong> and to receive marketing
-                material from Otty
-              </label>
-              <Button type="submit" ofType="secondary">
-                Spin the wheel!
-              </Button>
-            </form>
-          </div>
+          {!hasPlayed ? (
+            <div className={styles.textContainer}>
+              <h1>
+                Spin the wheel <br /> to win prizes!
+              </h1>
+              <form onSubmit={(e) => handleSubmit(e)}>
+                <label for="email">
+                  Enter your email address
+                  <div className={styles.emailInput}>
+                    <EmailIcon />
+                    <input
+                      type="email"
+                      id="email"
+                      value={inputValue.value}
+                      onChange={(e) => handleChange(e)}
+                      required
+                    />
+                  </div>
+                </label>
+                <label for="terms">
+                  <input type="checkbox" id="terms" required />
+                  <span className={styles.checkbox} />I agree with{" "}
+                  <strong>Terms & Conditions</strong> and to receive marketing
+                  material from Otty
+                </label>
+                <Button type="submit" ofType="secondary">
+                  Spin the wheel!
+                </Button>
+              </form>
+            </div>
+          ) : (
+            <div className={styles.textContainer}>
+              <h1>You've already played</h1>
+            </div>
+          )}
           <WheelImg />
         </>
       ) : (
