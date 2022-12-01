@@ -8,6 +8,7 @@ import {
   doc,
 } from "firebase/firestore";
 import React, { useState } from "react";
+import { document } from "browser-monads";
 
 import WheelComponent from "./wheelComponent";
 import * as styles from "./index.module.sass";
