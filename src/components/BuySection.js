@@ -21,18 +21,25 @@ const BuySection = () => {
           <div>
             <h2>Where to buy Otty</h2>
             <div className={styles.btnContainer}>
-              <Button
-                ofType="tertiary"
-                ofSize="large"
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  gap: "0.4rem",
-                }}
+              <a
+                href="https://www.amazon.co.uk/dp/B0BNJR6N73"
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="Buy Otty on Amazon"
               >
-                Order on <AmazonIcon />
-                Amazon
-              </Button>
+                <Button
+                  ofType="tertiary"
+                  ofSize="large"
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    gap: "0.4rem",
+                  }}
+                >
+                  Order on <AmazonIcon />
+                  Amazon
+                </Button>
+              </a>
               <Button ofType="whiteOutline" isDisabled={true} ofSize="large">
                 Buy here (Coming soon)
               </Button>
