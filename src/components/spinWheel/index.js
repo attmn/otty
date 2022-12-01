@@ -31,18 +31,27 @@ const app = initializeApp(firebaseConfig);
 // Initialize Cloud Firestore and get a reference to the service
 const db = getFirestore(app);
 
-const readData = async () => {
-  const querySnapshot = await getDocs(collection(db, "amazonVouchers1"));
-  querySnapshot.forEach((doc) => {
-    console.log(`${doc.id} => ${doc.data().value}`);
-  });
-};
-
 const addUserData = async (email, result = "") => {
   await setDoc(doc(db, "users", email), {
     email: email,
     result: result,
   });
+};
+
+const addVoucher = async () => {
+  const array = [];
+
+  for (let index = 0; index < array.length; index++) {
+    try {
+      const docRef = await addDoc(collection(db, "amazonVouchers5"), {
+        used: false,
+        value: array[index],
+      });
+      console.log("Document written with ID: ", docRef.id);
+    } catch (e) {
+      console.error("Error adding document: ", e);
+    }
+  }
 };
 
 const SpinWheel = () => {
@@ -163,24 +172,21 @@ const SpinWheel = () => {
 
 const Wheel2 = ({ addUserData, userEmail, userResult, setCookies }) => {
   const [result, setResult] = useState(userResult);
+  const [voucher, setVoucher] = useState("");
 
   const segments = [
     "20% OFF Your next order",
     "Free pack of Otty",
-    "Otty sticker pack",
-    "50% OFF Your next order",
+    "30% OFF Your next order",
     "Otty triple pack",
     "20% OFF Your next order",
     "6 Months subscription",
-    "Otty sticker pack",
-    "20% OFF Your next order",
-    "Free pack of Otty",
+    "10% OFF Your next order",
+    "Buy one get one free",
+    "10% OFF Your next order",
     "50% OFF Your next order",
-    "Otty sticker pack",
   ];
   const segColors = [
-    "#426974",
-    "#4BB7A6",
     "#426974",
     "#4BB7A6",
     "#426974",
@@ -198,13 +204,65 @@ const Wheel2 = ({ addUserData, userEmail, userResult, setCookies }) => {
     setCookies();
   };
 
+  const getVoucherData = async (voucherType) => {
+    let voucherCollection;
+
+    switch (voucherType) {
+      case 1:
+        voucherCollection = "amazonVouchers1";
+      case 2:
+        voucherCollection = "amazonVouchers2";
+      case 3:
+        voucherCollection = "amazonVouchers3";
+      case 4:
+        voucherCollection = "amazonVouchers4";
+      case 5:
+        voucherCollection = "amazonVouchers4";
+      default:
+        break;
+    }
+    const querySnapshot = await getDocs(collection(db, voucherCollection));
+    querySnapshot.forEach((doc) => {
+      if (doc.data().used === false) {
+        setVoucher(doc.data().value);
+        makeVoucherUsed(voucherCollection, doc.id, doc.data().value);
+      } else {
+        setVoucher("ERROR! Please get in touch");
+      }
+    });
+  };
+
+  const makeVoucherUsed = async (
+    voucherCollection,
+    voucherId,
+    voucherValue
+  ) => {
+    await setDoc(doc(db, voucherCollection, voucherId), {
+      used: true,
+      value: voucherValue,
+    });
+  };
+
   return (
     <div className={styles.wheelContainer}>
       {result !== "" && (
         <div className={styles.resultContainer}>
           {(() => {
             switch (result) {
+              case "10% OFF Your next order":
+                getVoucherData(5);
+                return (
+                  <div>
+                    <div className={styles.resultHeading}>You've won!</div>
+                    <p>
+                      Use this Amazon voucher on your next purchase to get{" "}
+                      <strong>10% OFF</strong> your next order!
+                    </p>
+                    <VoucherContainer voucherCode={voucher} />
+                  </div>
+                );
               case "20% OFF Your next order":
+                getVoucherData(1);
                 return (
                   <div>
                     <div className={styles.resultHeading}>You've won!</div>
@@ -212,10 +270,23 @@ const Wheel2 = ({ addUserData, userEmail, userResult, setCookies }) => {
                       Use this Amazon voucher on your next purchase to get{" "}
                       <strong>20% OFF</strong> your next order!
                     </p>
-                    <VoucherContainer voucherCode="SHAV-SFEH-JGDT-SCFS" />
+                    <VoucherContainer voucherCode={voucher} />
                   </div>
                 );
+              case "30% OFF Your next order":
+                getVoucherData(2);
+                return (
+                  <>
+                    <div className={styles.resultHeading}>You've won!</div>
+                    <p>
+                      Use this Amazon voucher on your next purchase to get{" "}
+                      <strong>30% OFF</strong> your next order!
+                    </p>
+                    <VoucherContainer voucherCode={voucher} />
+                  </>
+                );
               case "50% OFF Your next order":
+                getVoucherData(3);
                 return (
                   <>
                     <div className={styles.resultHeading}>You've won!</div>
@@ -223,7 +294,19 @@ const Wheel2 = ({ addUserData, userEmail, userResult, setCookies }) => {
                       Use this Amazon voucher on your next purchase to get{" "}
                       <strong>50% OFF</strong> your next order!
                     </p>
-                    <VoucherContainer voucherCode="SHAV-SFEH-JGDT-SCFS" />
+                    <VoucherContainer voucherCode={voucher} />
+                  </>
+                );
+              case "Buy one get one free":
+                getVoucherData(4);
+                return (
+                  <>
+                    <div className={styles.resultHeading}>You've won!</div>
+                    <p>
+                      Use this Amazon voucher to get a free pack of Otty when
+                      you buy a pack !
+                    </p>
+                    <VoucherContainer voucherCode={voucher} />
                   </>
                 );
               case "Free pack of Otty":
@@ -285,19 +368,6 @@ const Wheel2 = ({ addUserData, userEmail, userResult, setCookies }) => {
                     </p>
                   </>
                 );
-              case "Otty sticker pack":
-                return (
-                  <>
-                    <div className={styles.resultHeading}>You've won!</div>
-                    <p>
-                      We will soon be in touch to send you a free Otty sticker
-                      pack!
-                    </p>
-                    <p className={styles.resultNote}>
-                      (We’ll use the email you entered earlier)
-                    </p>
-                  </>
-                );
               default:
                 return null;
             }
@@ -324,7 +394,7 @@ const Wheel2 = ({ addUserData, userEmail, userResult, setCookies }) => {
 const VoucherContainer = ({ voucherCode }) => {
   return (
     <div className={styles.voucherContainer}>
-      {voucherCode}
+      {voucherCode === "" ? "Loading..." : voucherCode}
       <button
         onClick={() => {
           navigator.clipboard.writeText(voucherCode);
