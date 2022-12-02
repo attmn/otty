@@ -1,0 +1,30 @@
+@use '../../styles/tokens'
+
+.container
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    column-gap: 1.2rem
+    padding: 4.8rem 2.4rem 9.6rem 2.4rem
+    background-color: tokens.$background-light
+    justify-items: center
+
+.sectionContainer
+    grid-column: 1/5
+    gap: 4.8rem
+    display: flex
+    flex-direction: column
+    width: 100%
+
+@media screen and (min-width: 1024px)
+    .container
+        grid-template-columns: repeat(12, 1fr)
+        column-gap: 2.4rem
+        padding: 4.8rem 4.8rem 9.6rem 4.8rem
+
+    .sectionContainer
+        grid-column: 2/12
+        grid-row: 1
+
+    .tagList
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr
